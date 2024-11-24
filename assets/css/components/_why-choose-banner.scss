@@ -1,0 +1,157 @@
+// Why Choose Banner section CSS
+.why-choose-banner {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 70px;
+
+		@include max-767 {
+			br {
+				display: none;
+			}
+		}
+
+		@include max-991 {
+			gap: 40px;
+		}
+	}
+
+	&__inner_heading {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 24px;
+		text-align: center;
+
+		@include max-991 {
+			gap: 20px;
+		}
+
+		&--subtitle {
+			background: var(--color-white-10, #FFFFFF1A);
+			box-shadow: 0px 1px 2px 0px #0000000D;
+			border: 1px solid $border-color;
+			border-radius: 12px;
+			padding: 7px 15px;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			&::before {
+				content: "";
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: #1D64FF;
+				box-shadow: 0px 0px 4px 4px #1D64FF33;
+			}
+
+			p {
+				font-weight: 500;
+				font-style: normal;
+				font-size: 13px;
+				line-height: 21px;
+
+				@include min-1400 {
+					font-size: 15px;
+					line-height: 23px;
+				}
+			}
+		}
+
+		h1 {
+			span {
+				color: $sub-heading-blue;
+			}
+		}
+
+		&--btn {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			gap: 24px;
+
+			@include max-991 {
+				gap: 10px 20px;
+			}
+
+			a {
+				display: flex;
+				align-items: center;
+				font-size: 16px;
+				padding: 12px 20px;
+				border: 1px solid $border-color;
+
+				&::after {
+					content: '\e818';
+					font-family: "fontello";
+					font-size: 16px;
+					line-height: 16px;
+					font-weight: 100;
+					height: 25px;
+					width: 25px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					margin: 0 0 0 10px;
+					padding: 0;
+					border: 1px solid hsla(0, 0%, 93%, .3);
+					border-radius: 7px;
+					transition: all 0.5s;
+
+					@include max-575 {
+						font-size: 18px;
+						line-height: 18px;
+					}
+				}
+			}
+
+			.why-choose-banner__inner_heading--btn-first {
+				background: #1D64FF;
+				color: $color-white;
+				box-shadow: 0px 3px 10px 0px #1D64FF33;
+
+				&::after {
+					background: var(--color-white-10, #FFFFFF1A);
+				}
+
+				&:hover {
+					background: $color-black;
+			
+					&::after {
+						background: var(--color-white-10, #FFFFFF1A);
+					}
+				}
+
+			}
+
+			.why-choose-banner__inner_heading--btn-second {
+				background: $color-white;
+				color: $color-black;
+				box-shadow: 0px 3px 5px 0px #0000000D;
+
+				&::after {
+					background: var(--color-black-3, #00000008);
+				}
+
+				&:hover {
+					background: $color-black;
+					color: $color-white;
+				}
+			}
+		}
+	}
+
+	&__inner_img {
+		img {
+			width: 100%;
+			height: auto;
+			min-height: 165.5px;
+			object-fit: cover;
+			border: 2px solid $border-color;
+			border-radius: 12px;
+		}
+	}
+}

@@ -1,0 +1,186 @@
+// Our Solution section homepage css.
+.our-solution-home {
+	.why-choose-solution__inner {
+		&_heading {
+			&--title {
+				display: flex;
+				align-items: end;
+				gap: 9px;
+
+				div.inner-title_container {
+					position: relative;
+					display: inline-block;
+					padding: 6px 24px;
+					border-radius: 100px;
+					overflow: hidden;
+				}
+
+				div.inner-title_container::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					padding: 2px;
+					border-radius: 100px;
+					background: linear-gradient(to right, #1D64FF 0%, #A259FF 30%, #0ACF83 100%);
+					-webkit-mask: linear-gradient($color-white 0 0) content-box, linear-gradient($color-white 0 0);
+					mask: linear-gradient($color-white 0 0) content-box, linear-gradient($color-white 0 0);
+					-webkit-mask-composite: xor;
+					mask-composite: exclude;
+				}
+
+				span.inner-title {
+					line-height: 16px;
+					font-weight: 700;
+					background: linear-gradient(to right, #1D64FF 0%, #A259FF 30%, #0ACF83 100%);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					position: relative;
+					z-index: 1;
+				}
+			}
+		}
+
+		.row {
+			justify-content: center;
+			--bs-gutter-x: 22px;
+		}
+
+		&_box {
+			padding: 12px 15px;
+			border: unset;
+			box-shadow: 0px 3px 10px 0px #00000008;
+
+			&--heading {
+				align-items: flex-start;
+				flex-direction: column;
+				gap: 5px;
+
+				h3 {
+					font-size: 14px;
+					line-height: 22px;
+					font-weight: 600;
+					color: $color-black;
+				}
+			}
+		}
+	}
+
+	@include min-1400 {
+		.why-choose-solution__inner {
+			&_box {
+				&--heading {
+					h3 {
+						font-size: 16px;
+						line-height: 24px;
+					}
+				}
+			}
+		}
+	}
+
+	@include max-1199 {
+		.why-choose-solution__inner {
+			br {
+				display: block;
+			}
+
+			&_heading {
+				&--title {
+					span.inner-title {
+						font-size: 12px;
+						line-height: 12px;
+					}
+				}
+			}
+
+			&_box {
+				&--heading {
+					h3 {
+						font-size: 13px;
+						line-height: 20px;
+					}
+				}
+			}
+		}
+	}
+
+	@include max-991 {
+		.why-choose-solution__inner {
+			&_heading {
+				&--title {
+					flex-direction: column;
+					align-items: flex-start;
+
+					div.inner-title_container {
+						padding: 4px 24px 6px 24px;
+					}
+
+					span.inner-title {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+
+	@include max-767 {
+		.why-choose-solution__inner {
+			br {
+				display: none;
+			}
+		}
+	}
+
+	@include max-575 {
+		.why-choose-solution__inner {
+			&_heading {
+				&--title {
+					span.inner-title {
+						font-size: 12px;
+					}
+				}
+			}
+
+			.col-lg-2 {
+				width: 33.33%;
+			}
+
+			&_box {
+				&--heading {
+					i {
+						&::before {
+							font-size: 20px;
+							min-height: 40px;
+							min-width: 40px;
+							border-radius: 10px;
+						}
+					}
+
+					h3 {
+						font-size: 12px;
+						line-height: 18px;
+					}
+				}
+			}
+		}
+	}
+
+	@include max-425 {
+		.why-choose-solution__inner {
+			.col-lg-2 {
+				width: 50%;
+			}
+		}
+	}
+
+	@include max-360 {
+		.why-choose-solution__inner {
+			.col-lg-2 {
+				width: 100%;
+			}
+		}
+	}
+}

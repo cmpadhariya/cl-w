@@ -1,0 +1,79 @@
+// import all fonts here
+@import "~@fontsource/fuzzy-bubbles/400.css";
+@import "~@fontsource/fuzzy-bubbles/700.css";
+@import "~@fontsource/plus-jakarta-sans/400.css";
+@import "~@fontsource/plus-jakarta-sans/500.css";
+@import "~@fontsource/plus-jakarta-sans/600.css";
+@import "~@fontsource/plus-jakarta-sans/700.css";
+
+// colors
+$color-black: #000000;
+$color-white: #ffffff;
+$heading-color: #0E1320;
+$sub-heading-color: #262626;
+$sub-heading-blue: #2B51FF;
+$description-color: #433E3F;
+$section-light-bg: #F6F8FA;
+$section-bg: #2B51FF0F; 
+$border-color: #DDDDDD;
+
+// font family
+$primary-family: "Plus Jakarta Sans", sans-serif;
+$secondary-family: "Fuzzy Bubbles", sans-serif;
+
+// fontello icons
+@font-face {
+  font-family: "fontello";
+  src: '/assets/font/fontello/font/fontello.woff2' format('woff2');
+  font-display: swap;
+}
+
+// responsive
+
+@mixin min-1920 {
+  @media screen and (min-width: 1920px) {
+    @content;
+  }
+}
+@mixin min-1440 {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+@mixin min-1400 {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}
+@mixin max-1199 {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin max-991 {
+  @media screen and (max-width: 991px) {
+    @content;
+  }
+}
+@mixin max-767 {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin max-575 {
+  @media screen and (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin max-425 {
+  @media screen and (max-width: 425px) {
+    @content;
+  }
+}
+@mixin max-360 {
+  @media screen and (max-width: 360px) {
+    @content;
+  }
+}

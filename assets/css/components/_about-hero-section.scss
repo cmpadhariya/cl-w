@@ -1,0 +1,39 @@
+// About us page hero section CSS
+.about-hero {
+	background: url("../image/about-hero-bg.webp");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	.why-choose-banner__inner {
+		&_heading {
+			gap: 12px;
+		}
+
+		.row {
+			justify-content: center;
+
+			.custom-gap {
+				display: flex;
+				flex-direction: column;
+				gap: 55px;
+			}
+		}
+
+		&_img {
+			img {
+				border: unset;
+			}
+		}
+	}
+
+	@include max-767 {
+		.why-choose-banner__inner {
+			.row {
+				.custom-gap {
+					gap: 30px;
+				}
+			}
+		}
+	}
+}

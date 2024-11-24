@@ -1,0 +1,16 @@
+// author page css file
+.author-posts {
+    .row {
+        --bs-gutter-y: 40px;
+    }
+
+    h2 {
+        font-weight: 600;
+        margin-bottom: 40px;
+    }
+
+    .custom-pagination {
+        border-top: 1px solid rgba(228, 231, 236, 1);
+        padding-top: 25px;
+    }
+}

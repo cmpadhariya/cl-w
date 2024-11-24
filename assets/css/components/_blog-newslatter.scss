@@ -1,0 +1,173 @@
+// Blog Newslatter Section CSS
+.blog-newslatter {
+	&__inner {
+		padding: 30px 137px;
+		background: radial-gradient(141.63% 142.86% at 50% -37.5%, #565656 0%, #262626 81.91%);
+		border: 1px solid;
+		border-radius: 12px;
+		border-image-source: radial-gradient(141.63% 142.86% at 50% -37.5%, #565656 0%, #262626 81.91%);
+
+		@include max-1199 {
+			padding: 30px 60px;
+
+			br {
+				display: none;
+			}
+		}
+
+		@include max-575 {
+			padding: 30px 20px;
+		}
+
+		.row {
+			align-items: center;
+			--bs-gutter-x: 4.438rem;
+			gap: 30px 0px;
+
+			@include max-1199 {
+				--bs-gutter-x: 1.5rem;
+			}
+
+			@include max-575 {
+				gap: 20px 0;
+			}
+		}
+
+		&_heading {
+			width: 100%;
+
+			h2 {
+				color: #FAFAFA;
+				text-align: center;
+			}
+		}
+
+		&_content {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+
+			.wpcf7 .wpcf7-form {
+				.blog-newslatter__inner_content--form {
+					p {
+						display: flex;
+						align-items: center;
+						border: 1px solid $border-color;
+						border-radius: 12px;
+						background: $color-white;
+						box-shadow: 0px 3px 5px 0px #0000000D;
+						padding: 11px 20px;
+						position: relative;
+
+						@include max-575 {
+							padding: 8px 16px;
+						}
+
+						.wpcf7-form-control-wrap,
+						.wpcf7-form-control-wrap .wpcf7-email {
+							width: 100%;
+							margin-right: 20px;
+                            color: $color-black;
+						}
+
+						br {
+							display: none;
+						}
+
+						.wpcf7-email,
+						.wpcf7-email::placeholder {
+							font-size: 15px;
+							line-height: 23px;
+							font-weight: 400;
+							color: $heading-color;
+							font-family: $primary-family;
+							border: none;
+
+							@include min-1400 {
+								font-size: 16px;
+								line-height: 24px;
+							}
+
+							@include max-575 {
+								font-size: 14px;
+								line-height: 22px;
+							}
+						}
+
+						.wpcf7-submit {
+							height: 25px;
+							width: 25px;
+							min-width: 25px;
+							text-indent: 100%;
+							background: url('./../image/Overlay.webp');
+							background-repeat: no-repeat;
+							background-position: center;
+							background-size: cover;
+							border: 1px solid #FFFFFF80;
+							border-radius: 8px;
+						}
+
+						.wpcf7-not-valid-tip {
+							position: absolute;
+							bottom: -35px;
+						}
+
+						.wpcf7-spinner {
+							position: absolute;
+							margin: 0;
+							right: -35px;
+							background-color: $color-white;
+
+							&::before {
+								background-color: $color-black;
+							}
+						}
+					}
+				}
+
+				.wpcf7-response-output {
+					color: $color-white;
+					margin: 25px 0 0 0;
+					border-radius: 12px;
+					padding: 5px 10px;
+					font-size: 14px;
+				}
+			}
+
+			p.blog-header__inner_description {
+				color: $color-white;
+				font-family: $secondary-family;
+				font-size: 14px;
+				line-height: 22px;
+				display: flex;
+				align-items: baseline;
+				gap: 16px;
+
+				@include min-1400 {
+					font-size: 16px;
+					line-height: 24px;
+				}
+
+				@include max-991 {
+					text-align: center;
+					justify-content: center;
+				}
+
+				&::before {
+					content: "\E82A";
+					font-family: "fontello";
+					font-size: 10px;
+					color: $sub-heading-blue;
+					width: fit-content;
+					display: block;
+					margin: 0;
+					padding: 0;
+
+					@include max-767 {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

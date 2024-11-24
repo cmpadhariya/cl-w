@@ -1,0 +1,361 @@
+/************************************/
+/*****        01. General css         ****/
+/************************************/
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+html,
+body {
+	-webkit-font-smoothing: antialiased;
+	scroll-behavior: smooth;
+}
+
+body * {
+	margin: 0;
+	padding: 0;
+	font-family: $primary-family;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+	color: $heading-color;
+}
+
+a:hover,
+a {
+	text-decoration: none;
+	outline: 0;
+}
+
+a:focus {
+	text-decoration: none;
+	outline: 0;
+}
+
+*,
+::after,
+::before {
+	box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+button:focus,
+input:focus,
+img:focus,
+.slick-slide:focus,
+textarea:focus,
+input:focus {
+	outline: none;
+}
+
+h1 {
+	font-size: 40px;
+	line-height: 48px;
+	font-style: normal;
+	font-weight: 700;
+
+	@include min-1400 {
+		font-size: 44px;
+		line-height: 52px;
+	}
+
+	@include max-1199 {
+		font-size: 36px;
+		line-height: 44px;
+	}
+
+	@include max-991 {
+		font-size: 34px;
+		line-height: 42px;
+	}
+
+	@include max-767 {
+		font-size: 32px;
+		line-height: 40px;
+	}
+
+	@include max-575 {
+		font-size: 30px;
+		line-height: 38px;
+	}
+
+	@include max-425 {
+		font-size: 27px;
+		line-height: 34px;
+	}
+}
+
+h2 {
+	font-size: 32px;
+	line-height: 38px;
+	font-weight: 700;
+
+	@include min-1400 {
+		font-size: 34px;
+		line-height: 40px;
+	}
+
+	@include max-991 {
+		font-size: 30px;
+		line-height: 36px;
+	}
+
+	@include max-575 {
+		font-size: 28px;
+		line-height: 34px;
+	}
+
+	@include max-425 {
+		font-size: 25px;
+		line-height: 32px;
+	}
+}
+
+h3 {
+	font-size: 28px;
+	line-height: 34px;
+	font-weight: 600;
+
+	@include min-1400 {
+		font-size: 30px;
+		line-height: 36px;
+	}
+
+	@include max-991 {
+		font-size: 26px;
+		line-height: 32px;
+	}
+
+	@include max-575 {
+		font-size: 24px;
+		line-height: 30px;
+	}
+
+	@include max-425 {
+		font-size: 22px;
+		line-height: 28px;
+	}
+}
+
+h4 {
+	font-size: 21px;
+	line-height: 27px;
+	font-weight: 600;
+
+	@include min-1400 {
+		font-size: 23px;
+		line-height: 29px;
+	}
+
+	@include max-991 {
+		font-size: 19px;
+		line-height: 25px;
+	}
+
+	@include max-575 {
+		font-size: 17px;
+		line-height: 23px;
+	}
+
+	@include max-425 {
+		font-size: 16px;
+		line-height: 22px;
+	}
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-weight: 400;
+	color: $description-color;
+}
+
+.description-primary {
+	font-size: 18px;
+	line-height: 26px;
+
+	@include min-1400 {
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	@include max-991 {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	@include max-425 {
+		font-size: 14px;
+		line-height: 22px;
+	}
+}
+
+.description-secondary {
+	font-size: 16px;
+	line-height: 24px;
+
+	@include min-1400 {
+		font-size: 18px;
+		line-height: 26px;
+	}
+
+	@include max-991 {
+		font-size: 14px;
+		line-height: 22px;
+	}
+}
+
+.global-button {
+	color: $color-white;
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	padding: 15px 20px;
+	border-radius: 12px;
+	background-color: $heading-color;
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 700;
+
+	@include max-991 {
+		padding: 12px 16px;
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	&:hover {
+		transition: all 0.5s;
+		background-color: $color-black;
+		color: $color-white;
+	}
+}
+
+.section-padding {
+	padding: 70px 0px;
+
+	@include max-767 {
+		padding: 50px 20px;
+	}
+
+	@include max-425 {
+		padding: 40px 20px;
+	}
+}
+
+.section-subtitle {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding: 6px 10px;
+	border-radius: 100px;
+	max-width: fit-content;
+	border: 1px solid #e6e9ee;
+	background-color: $color-white;
+
+	@include max-575 {
+		padding: 3px 8px;
+	}
+
+	i {
+		&::before {
+			font-size: 19px;
+			margin: 0;
+			padding: 0;
+
+			@include max-575 {
+				font-size: 16px;
+			}
+		}
+	}
+
+	p {
+		font-weight: 600;
+		color: $description-color;
+	}
+}
+
+.common-padding {
+	padding: 40px 0px;
+
+	@include max-767 {
+		padding: 40px 20px;
+	}
+}
+
+.section-padding-rl-0 {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.section-pt-0 {
+	padding-top: 0;
+}
+
+.section-pb-0 {
+	padding-bottom: 0;
+}
+
+.section-bg {
+	background-color: $section-bg;
+}
+
+.section-light-bg {
+	background-color: $section-light-bg;
+}
+
+.single-blog-cta-one-blue {
+	background-color: $sub-heading-blue;
+}
+
+.single-blog-cta-two-black {
+	background-color: $color-black;
+}
+
+.section-subtitle {
+	display: flex;
+	align-items: center;
+	gap: 3px;
+	padding: 6px 10px;
+	border-radius: 100px;
+	max-width: fit-content;
+	border: 1px solid #e6e9ee;
+	background-color: $color-white;
+
+	i {
+		&::before {
+			font-size: 19px;
+			margin: 0;
+			padding: 0;
+		}
+
+		@include max-575 {
+			font-size: 16px;
+		}
+	}
+
+	p {
+		font-weight: 600;
+		color: $description-color;
+	}
+}
+
+.d-none {
+	display: none;
+}

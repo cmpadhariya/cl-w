@@ -1,0 +1,136 @@
+// faq-section css
+.faq-section {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		&_subtitle {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			&::before {
+				background-color: #2b51ff;
+				content: "";
+				height: 1px;
+				width: 50px;
+			}
+
+			i {
+				&::before {
+					font-size: 20px;
+					color: $sub-heading-blue;
+					display: block;
+					margin: 0;
+					padding: 0;
+					width: fit-content;
+				}
+			}
+
+			p {
+				font-weight: 600;
+				color: $sub-heading-blue;
+				text-transform: uppercase;
+			}
+
+			&::after {
+				content: "";
+				width: 50px;
+				height: 1px;
+				background-color: $sub-heading-blue;
+			}
+		}
+
+		&_heading {
+			padding: 18px 0 46px 0;
+
+			@include max-991 {
+				padding: 15px 0 40px 0;
+			}
+
+			@include max-575 {
+				text-align: center;
+				padding: 15px 0 30px 0;
+			}
+
+			span {
+				color: var(--Neutrals-Neutrals800, rgba(67, 62, 63, 1));
+			}
+		}
+
+		&_list {
+			padding: 10px 30px;
+			margin-bottom: 15px;
+			background-color: rgba(255, 255, 255, 1);
+			border: 1px dashed #E6E9EE;
+			border-radius: 16px;
+			width: 70%;
+			box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.03);
+
+			@include max-991 {
+				width: 100%;
+			}
+
+			@include max-425 {
+				padding: 8px 16px;
+			}
+
+			&-question {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 20px 0;
+				cursor: pointer;
+
+				@include max-425 {
+					padding: 10px 0;
+				}
+
+				h3 {
+					font-weight: 600;
+					color: rgba(0, 0, 0, 1);
+					padding-right: 20px;
+				}
+
+				.close-button,
+				.click-button {
+					cursor: pointer;
+
+					&::before {
+						margin: 0;
+						padding: 0;
+						font-size: 18px;
+						color: rgba(21, 19, 20, 1);
+					}
+				}
+			}
+
+			&-answer {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.4s ease, padding 0.4s ease;
+
+				p {
+					font-weight: 500;
+					padding: 0 0 10px 0;
+				}
+
+				a {
+					color: $sub-heading-blue;
+				}
+
+				.showanswer {
+					max-height: 500px;
+					opacity: 1;
+				}
+
+				&:last-child,
+				&:first-child {
+					margin: 0;
+				}
+			}
+		}
+	}
+}

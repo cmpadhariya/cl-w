@@ -1,0 +1,92 @@
+// Contact Page Call To Action Section CSS
+.contact-call-to-action {
+
+    @include max-1199 {
+        br {
+            display: none;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        text-align: center;
+        border-radius: 12px;
+        background: linear-gradient(73.41deg, rgba(0, 0, 0, 0.9) 50.18%, rgba(0, 0, 0, 0) 92.53%),
+            linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+        box-shadow: 0px 16px 35px 15px #00000026;
+        padding: 36px;
+
+        img {
+            width: auto;
+            height: auto;
+            max-width: 128px;
+            object-fit: cover;
+        }
+
+        h2 {
+            font-weight: 500;
+            color: $color-white;
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+        &_description {
+            color: var(--color-white-80, #FFFFFFCC);
+
+            span {
+                font-weight: 500;
+            }
+        }
+
+        a {
+            font-size: 16px;
+            color: $color-white;
+            background: $sub-heading-blue;
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            margin-top: 10px;
+
+            &::after {
+                content: '\e818';
+                font-family: "fontello";
+                font-weight: 100;
+                font-size: 16px;
+                line-height: 16px;
+                color: $color-white;
+                background: var(--color-white-10, #FFFFFF1A);
+                border: 1px solid hsla(0, 0%, 93%, .3);
+                border-radius: 7px;
+                height: 25px;
+                width: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 0 0 10px;
+                padding: 0;
+                transition: all 0.5s;
+
+                @include max-575 {
+                    font-size: 18px;
+                    line-height: 18px;
+                }
+            }
+
+            &:hover {
+                background-color: $color-white;
+                color: $heading-color;
+
+                &::after {
+                    color: $heading-color;
+                    background: var(--color-black-3, #00000008);
+                }
+            }
+        }
+    }
+}

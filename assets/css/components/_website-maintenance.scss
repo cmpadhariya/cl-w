@@ -1,0 +1,151 @@
+// website-maintenance section css
+.website-maintenance {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &_subtitle {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            &::before {
+                content: "";
+                background-color: #2b51ff;
+                height: 1px;
+                width: 50px;
+            }
+
+            i {
+                &::before {
+                    font-size: 20px;
+                    color: $sub-heading-blue;
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                    width: fit-content;
+                }
+            }
+
+            p {
+                font-weight: 600;
+                color: $sub-heading-blue;
+                text-transform: uppercase;
+            }
+
+            &::after {
+                content: "";
+                width: 50px;
+                height: 1px;
+                background-color: $sub-heading-blue;
+            }
+        }
+
+        &_heading {
+            padding: 18px 0 46px 0;
+
+            @include max-991 {
+                padding: 15px 0 30px 0;
+            }
+
+            @include max-575 {
+                text-align: center;
+                padding: 15px 0 25px 0;
+            }
+
+            span {
+                color: var(--Neutrals-Neutrals800, rgba(67, 62, 63, 1));
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-wrap: wrap;
+
+        &_box {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            flex: 1;
+            height: 100%;
+
+            h3 {
+                color: var(--Neutrals-Neutrals800, rgba(67, 62, 63, 1));
+                text-align: center;
+                margin-bottom: 28px;
+
+                @include max-767 {
+                    margin-bottom: 15px;
+                }
+            }
+
+            &--image {
+                display: flex;
+                justify-content: center;
+                margin: 0 0 20px 0;
+
+                @include max-767 {
+                    margin: 10px 0 15px 0;
+                }
+            }
+
+            ul {
+                border: 1px solid rgba(214, 213, 213, 1);
+                border-radius: 20px;
+                padding: 26px 48px 26px 40px;
+                margin-top: 10px;
+                flex-grow: 1;
+
+                @include max-767 {
+                    padding: 22px 35px;
+                }
+
+                li {
+                    color: var(--Neutrals-Neutrals700, rgba(90, 85, 85, 1));
+
+                    &:not(:last-child) {
+                        margin-bottom: 22px;
+                    }
+
+                    i {
+                        padding-right: 15px;
+
+                        &::before {
+                            font-size: 18px;
+                            margin: 0;
+                            padding: 0;
+
+                            @include max-767 {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .second-box {
+            ul {
+                background: linear-gradient(249.08deg, #2B51FF 1.5%, rgba(255, 255, 255, 0) 39.29%);
+                box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.03);
+
+                li {
+                    font-weight: 600;
+                    color: var(--Neutrals-Neutrals1000, rgba(21, 19, 20, 1));
+
+                    i {
+                        &::before {
+                            margin: 0;
+                            font-size: 14px;
+                            color: rgba(0, 0, 0, 1);
+                            padding-right: 36px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

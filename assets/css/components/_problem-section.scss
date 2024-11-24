@@ -1,0 +1,185 @@
+// Problem Section CSS
+.problem {
+	&__top {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 18px;
+
+		&_subtitle {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+
+			i {
+				&::before {
+					font-size: 16px;
+					color: $sub-heading-blue;
+					width: fit-content;
+					display: block;
+					margin: 0;
+					padding: 0;
+				}
+			}
+
+			p {
+				font-weight: 600;
+				color: $sub-heading-blue;
+				text-transform: uppercase;
+			}
+
+			&::before, &::after {
+				content: "";
+				width: 50px;
+				height: 1px;
+				background-color: $sub-heading-blue;
+			}
+		}
+
+		h2 {
+			text-align: center;
+
+			span {
+				color: $sub-heading-blue;
+			}
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 26px;
+		margin-top: 16px;
+
+		span {
+			font-weight: 400;
+			text-align: center;
+			display: block;
+
+			strong {
+				font-weight: 500;
+			}
+		}
+
+		.row {
+			justify-content: center;
+
+			.custom-gap {
+				display: flex;
+				flex-direction: column;
+				gap: 6px;
+			}
+		}
+
+		&_box {
+			display: flex;
+			gap: 5px;
+			position: relative;
+			width: fit-content;
+			margin: 0 auto;
+			padding: 5px 8px 6px 8px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				background: linear-gradient(to right, #0027DC 0, rgba(52,89,255,.4) 100%);
+				-webkit-mask: linear-gradient($color-white 0 0) content-box, linear-gradient($color-white 0 0);
+				mask: linear-gradient($color-white 0 0) content-box, linear-gradient($color-white 0 0);
+				-webkit-mask-composite: xor;
+				mask-composite: exclude;
+				border-radius: 100px;
+				padding: 2px;
+			}
+
+			i {
+				line-height: 0;
+				color: rgba(52,89,255,.9);
+			}
+
+			i::before {
+				font-size: 20px;
+				margin: 0px;
+			}
+
+			p {
+				font-size: 14px;
+				line-height: 20px;
+				font-weight: 500;
+				color: $sub-heading-color;
+
+				strong {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+
+	@include min-1400 {
+		&__content {
+			&_box {
+				padding: 8px 10px;
+
+				p {
+					font-size: 16px;
+					line-height: 22px;
+				}
+			}
+		}
+	}
+
+	@include max-1199 {
+		&__content {
+			&_box {
+				align-items: center;
+			}
+		}
+	}
+
+	@include max-767 {
+		&__top {
+			br {
+				display: none;
+			}
+		}
+		&__content {
+			&_box {
+				padding: 7px 8px 7px;
+			}
+		}
+	}
+
+	@include max-575 {
+		&__top {
+			&_subtitle {
+				flex-direction: column;
+				gap: 5px;
+				position: relative;
+
+				i {
+					position: absolute;
+					left: -25px;
+				}
+
+				&::before, &::after {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	@include max-425 {
+		&__content {
+			&_box {
+				p {
+					font-size: 12px;
+					line-height: 18px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,344 @@
+/* we-work-section css */
+.we-work {	
+	&__top {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 13px 0px;
+
+		h2 {
+			line-height: 42px;
+			margin-bottom: 37px;
+			position: relative;
+
+			&::after {
+				content: url("../image/we-work-title-linning.webp");
+				position: absolute;
+				bottom: -43px;
+				left: 34%;
+			}
+
+			&::before {
+				content: '\E848';
+				font-family: 'fontello';
+				font-size: 22px;
+				color: $sub-heading-blue;
+				position: absolute;
+				bottom: -2px;
+				right: 34px;
+			}
+
+			span {
+				color: $sub-heading-blue;
+			}
+		}
+	}
+
+	&__content {
+		position: relative;
+
+		.parent-row {
+			padding: 24px 0px 31px 0px;
+			justify-content: center;
+
+			.row {
+				--bs-gutter-x: 1rem;
+				--bs-gutter-y: 1rem;
+				justify-content: center;
+				gap: 0px 26px;
+			}
+		}
+
+		&_box {
+			padding: 10px 20px;
+			border-radius: 100px;
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			height: 100%;
+			width: fit-content;
+			background: linear-gradient(271.2deg, rgba(29, 100, 255, 0.1) 0%, rgba(29, 100, 255, 0.2) 100%);
+
+			span {
+				font-size: 14px;
+				line-height: 20px;
+				font-weight: 600;
+				color: #1D64FF;
+			}
+
+			i {
+				&::before {
+					font-size: 24px;
+					color: #1D64FF;
+					margin: 0;
+					padding: 0;
+					width: fit-content;
+				}
+			}
+		}
+
+		&_button {
+			display: flex;
+
+			i {
+				margin-right: 13px;
+
+				&::before {
+					margin: 0;
+				}
+			}
+
+			a {
+				margin: 0 auto;
+				background-color: $sub-heading-blue;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+
+				img {
+					background: var(--color-white-10, hsla(0, 0%, 100%, .1));
+					border: 1px solid hsla(0, 0%, 93%, .3);
+					border-radius: 7px;
+					height: 25px;
+					padding: 6px;
+					width: 25px;
+				}
+
+				&:hover {
+					transition: all 500ms;
+					color: $color-white;
+				}
+			}
+		}
+	}
+
+	@include min-1400 {
+		&__top {
+			h2 {
+				&::before {
+					font-size: 24px;
+				}
+			}
+		}
+
+		&__content {
+			&_box {
+				span {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+
+	@include max-991 {
+		&__top {
+			h2 {
+				line-height: 36px;
+			}
+		}
+
+		&__content {
+			.parent-row {
+				.col-lg-8 {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+				.row {
+					flex-direction: column;
+					align-items: center;
+					width: 80%;
+				}
+			}
+
+			&_box {
+				width: 100%;
+				height: fit-content;
+			}
+		}
+	}
+
+	@include max-767 {
+		&__top {
+			h2 {
+				br {
+					display: none;
+				}
+			}
+		}
+	}
+
+	@include max-575 {
+		&__top {
+			h2 {
+				margin-bottom: 0px;
+
+				&::after {
+					display: none;
+				}
+				&::before {
+					display: none;
+				}
+			}
+
+			p {
+				br {
+					display: none;
+				}
+			}
+		}
+
+		&__content {
+			.parent-row {
+				.row {
+					--bs-gutter-x: 10px;
+					--bs-gutter-y: 10px;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	@include max-425 {
+		&__top {
+			h2 {
+				line-height: 32px;
+			}
+		}
+		&__content {
+			&_box {
+				padding: 8px 18px;
+				span {
+					font-size: 13px;
+					line-height: 20px;
+				}
+			}
+		}
+	}
+}
+
+/* we-work popup css */
+.we-work {
+	&__popup {
+		position: fixed;
+		top: 80px;
+		left: 0;
+		right: 0;
+		z-index: 1000;
+		opacity: 1;
+		overflow: hidden;
+
+		&_inner {
+			border-radius: 24px;
+			background-color: $color-white;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			height: 500px;
+			position: relative;
+
+			i {
+				position: absolute;
+				top: 51px;
+				right: 47px;
+				font-size: 29px;
+				color: $description-color;
+				cursor: pointer;
+			}
+		}
+
+		.row {
+			--bs-gutter-x: 16px;
+			--bs-gutter-y: 16px;
+			padding: 80px 24px;
+		}
+
+		&_item {
+			padding: 24px;
+
+			h3 {
+				font-size: 20px;
+				font-weight: 600;
+				line-height: $color-black;
+				padding: 16px 0px 6px 0px;
+			}
+		}
+	}
+
+	@include min-1440 {
+		&__popup {
+			&_item {
+				h3 {
+					font-size: 22px;
+				}
+			}
+		}
+	}
+
+	@include max-1199 {
+		&__popup {
+			i {
+				top: 30px;
+				right: 30px;
+			}
+		}
+	}
+
+	@include max-767 {
+		&__popup {
+			&_inner {
+				margin: 0 20px;
+			}
+
+			.row {
+				padding: 40px 24px;
+			}
+		}
+	}
+
+	@include max-425 {
+		&__popup {
+			.row {
+				--bs-gutter-y: 0px;
+			}
+
+			&_item {
+				padding: 24px 10px;
+			}
+		}
+	}
+}
+
+.work-popup-hidden {
+	display: none;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	width: 100%;
+	height: 100vh;
+	opacity: 0.5;
+	background-color: $color-black;
+}
+
+.slide-left {
+	animation: slideLeft 0.5s ease-out;
+}
+
+//We Work Section popup slide left animation
+@keyframes slideLeft {
+	from {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}

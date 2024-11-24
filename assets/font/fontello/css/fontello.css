@@ -1,0 +1,164 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?79464446');
+  src: url('../font/fontello.eot?79464446#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?79464446') format('woff2'),
+       url('../font/fontello.woff?79464446') format('woff'),
+       url('../font/fontello.ttf?79464446') format('truetype'),
+       url('../font/fontello.svg?79464446#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?79464446#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-arrow-growth:before { content: '\e800'; } /* '' */
+.icon-comment-heart:before { content: '\e801'; } /* '' */
+.icon-fast-load:before { content: '\e802'; } /* '' */
+.icon-content-audience:before { content: '\e803'; } /* '' */
+.icon-heart:before { content: '\e804'; } /* '' */
+.icon-star-empty:before { content: '\e805'; } /* '' */
+.icon-plus:before { content: '\e806'; } /* '' */
+.icon-minus:before { content: '\e807'; } /* '' */
+.icon-attention-alt:before { content: '\e808'; } /* '' */
+.icon-hero-button:before { content: '\e809'; } /* '' */
+.icon-linkedin:before { content: '\e80a'; } /* '' */
+.icon-cancel:before { content: '\e80b'; } /* '' */
+.icon-x-icon:before { content: '\e80c'; } /* '' */
+.icon-target:before { content: '\e80d'; } /* '' */
+.icon-flow-cross:before { content: '\e80e'; } /* '' */
+.icon-briefcase:before { content: '\e80f'; } /* '' */
+.icon-ui-ux-improvements:before { content: '\e810'; } /* '' */
+.icon-our-pricing:before { content: '\e811'; } /* '' */
+.icon-ok:before { content: '\e812'; } /* '' */
+.icon-we-work-subtitle:before { content: '\e813'; } /* '' */
+.icon-contact:before { content: '\e814'; } /* '' */
+.icon-our-process:before { content: '\e815'; } /* '' */
+.icon-contact-email:before { content: '\e816'; } /* '' */
+.icon-contact-location:before { content: '\e817'; } /* '' */
+.icon-right-small:before { content: '\e818'; } /* '' */
+.icon-location:before { content: '\e819'; } /* '' */
+.icon-check:before { content: '\e81a'; } /* '' */
+.icon-arrows-cw:before { content: '\e81b'; } /* '' */
+.icon-list:before { content: '\e81c'; } /* '' */
+.icon-users-outline:before { content: '\e81d'; } /* '' */
+.icon-mail:before { content: '\e81e'; } /* '' */
+.icon-phone:before { content: '\e81f'; } /* '' */
+.icon-location-outline:before { content: '\e820'; } /* '' */
+.icon-call-to-action-v2-button-arrow:before { content: '\e821'; } /* '' */
+.icon-back:before { content: '\e822'; } /* '' */
+.icon-monthly-results:before { content: '\e823'; } /* '' */
+.icon-tailored-strategy:before { content: '\e824'; } /* '' */
+.icon-plan-refinement:before { content: '\e825'; } /* '' */
+.icon-monthly-updates:before { content: '\e826'; } /* '' */
+.icon-understand-your-goals:before { content: '\e827'; } /* '' */
+.icon-product-launch-support:before { content: '\e828'; } /* '' */
+.icon-our-process-v2-subtitle:before { content: '\e829'; } /* '' */
+.icon-progress-subtitle-img:before { content: '\e82a'; } /* '' */
+.icon-progress-box-icon-1:before { content: '\e82b'; } /* '' */
+.icon-progress-box-icon-2:before { content: '\e82c'; } /* '' */
+.icon-planing-section-rocket:before { content: '\e82d'; } /* '' */
+.icon-call-v2:before { content: '\e82e'; } /* '' */
+.icon-faq-btn-icon:before { content: '\e82f'; } /* '' */
+.icon-questions-mark:before { content: '\e830'; } /* '' */
+.icon-lower-search-rankings-:before { content: '\e831'; } /* '' */
+.icon-slow-performance:before { content: '\e832'; } /* '' */
+.icon-content:before { content: '\e833'; } /* '' */
+.icon-identify-arrow:before { content: '\e834'; } /* '' */
+.icon-performance-boost:before { content: '\e835'; } /* '' */
+.icon-seo-opti:before { content: '\e836'; } /* '' */
+.icon-solution-subtitle:before { content: '\e837'; } /* '' */
+.icon-security-enhancements:before { content: '\e838'; } /* '' */
+.icon-regular-updates:before { content: '\e839'; } /* '' */
+.icon-key-benefits-subtitle:before { content: '\e83a'; } /* '' */
+.icon-custom-strategies:before { content: '\e83b'; } /* '' */
+.icon-costom-plan:before { content: '\e83c'; } /* '' */
+.icon-continuous-improvement:before { content: '\e83d'; } /* '' */
+.icon-featured-bookmark:before { content: '\e83e'; } /* '' */
+.icon-calender:before { content: '\e83f'; } /* '' */
+.icon-icon-right-custom:before { content: '\e840'; } /* '' */
+.icon-right-check-blue:before { content: '\e841'; } /* '' */
+.icon-linkedin-notbg:before { content: '\e842'; } /* '' */
+.icon-social-link:before { content: '\e843'; } /* '' */
+.icon-envelope:before { content: '\e844'; } /* '' */
+.icon-table-of-content:before { content: '\e845'; } /* '' */
+.icon-home-hero-growth:before { content: '\e846'; } /* '' */
+.icon-our-pricing-check:before { content: '\e847'; } /* '' */
+.icon-smilling-emojis:before { content: '\e848'; } /* '' */
+.icon-strategy:before { content: '\e849'; } /* '' */
+.icon-take-care:before { content: '\e84a'; } /* '' */
+.icon-our-pricing-subtitle:before { content: '\e84b'; } /* '' */
+.icon-up-pages:before { content: '\e84c'; } /* '' */
+.icon-website-issue-fixes:before { content: '\e84d'; } /* '' */
+.icon-seo-performance-enhancement:before { content: '\e84e'; } /* '' */
+.icon-content-design-updates:before { content: '\e84f'; } /* '' */
+.icon-uiux-security-improvements:before { content: '\e850'; } /* '' */
+.icon-product-launch-page:before { content: '\e851'; } /* '' */
+.icon-website-messaging-update:before { content: '\e852'; } /* '' */
+.icon-engaging-blogs:before { content: '\e853'; } /* '' */
+.icon-reports:before { content: '\e854'; } /* '' */
+.icon-support-backups:before { content: '\e855'; } /* '' */
+.icon-month-strategy:before { content: '\e856'; } /* '' */
+.icon-stripe:before { content: '\e857'; } /* '' */
+.icon-monthly-updates-1:before { content: '\e858'; } /* '' */
+.icon-plan-refinement-1:before { content: '\e859'; } /* '' */
+.icon-product-launch-support-1:before { content: '\e85a'; } /* '' */
+.icon-tailored-strategy-1:before { content: '\e85b'; } /* '' */
+.icon-understand-your-goals-1:before { content: '\e85c'; } /* '' */
+.icon-right-open:before { content: '\e85d'; } /* '' */
+.icon-home-house:before { content: '\e85e'; } /* '' */
+.icon-how-it-works-arrow:before { content: '\e85f'; } /* '' */
+.icon-support-backup:before { content: '\e860'; } /* '' */
+.icon-ok-circle:before { content: '\e861'; } /* '' */
+.icon-strategy-consultations:before { content: '\e862'; } /* '' */
+.icon-proactivity:before { content: '\e863'; } /* '' */
+.icon-innovation:before { content: '\e864'; } /* '' */
+.icon-our-company-subtitle:before { content: '\e865'; } /* '' */
+.icon-website-maintenance:before { content: '\e866'; } /* '' */
+.icon-sad:before { content: '\f119'; } /* '' */
+.icon-bullseye:before { content: '\f140'; } /* '' */
+.icon-instagram:before { content: '\f16d'; } /* '' */
+.icon-commenting-o:before { content: '\f27b'; } /* '' */
+.icon-question-circle:before { content: '\f29c'; } /* '' */

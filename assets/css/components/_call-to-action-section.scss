@@ -1,0 +1,131 @@
+// Call to Action Section SCSS.
+
+.call-to-action-section {
+    &__inner {
+        padding: 36px 46px;
+        background: linear-gradient(73.41deg, rgba(0, 0, 0, 0.9) 50.18%, rgba(0, 0, 0, 0) 92.53%),
+            linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+        border-radius: 24px;
+
+        @include max-767 {
+            padding: 15px 36px 35px 36px;
+        }
+
+        @include max-575 {
+            padding: 5px 25px 30px 25px;
+        }
+
+        &_image {
+            @include max-767 {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.call-to-action-section__inner--heading {
+    h2 {
+        font-weight: 500;
+        color: $color-white;
+
+        @include max-991 {
+            line-height: 47px;
+        }
+
+        @include max-767 {
+            line-height: 40px;
+            text-align: center;
+        }
+
+        span {
+            position: relative;
+            padding-left: 25px;
+
+            @include max-991 {
+                display: block;
+            }
+
+            @include max-575 {
+                display: inline-block;
+                padding-left: 3px;
+            }
+
+            &::after {
+                content: url("assets/./../../image/cta-background-round.webp");
+                position: absolute;
+                top: -11px;
+                left: 3px;
+                background-size: 100% 100%;
+
+                @include max-767 {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.call-to-action-section__inner--description {
+    p {
+        color: var(--color-white-80, rgba(255, 255, 255, 0.8));
+        padding: 21px 0 16px 0;
+
+        @include max-991 {
+            padding: 15px 0 25px 0;
+        }
+
+        @include max-767 {
+            text-align: center;
+        }
+
+        @include max-425 {
+            padding: 10px 0 20px 0;
+        }
+    }
+}
+
+.call-to-action-section__inner--button {
+    @include max-767 {
+        display: flex;
+        justify-content: center;
+    }
+
+    a {
+        color: $color-white;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 15px 15px 15px 20px;
+        background: rgba(29, 100, 255, 1);
+        box-shadow: 0px 3px 10px 0px rgba(29, 100, 255, 0.2);
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+        border-radius: 10px;
+        width: fit-content;
+        transition: 500 ms;
+
+        &:hover {
+            background: linear-gradient(180deg, rgba(82, 113, 255, 0.9) 0%, rgba(44, 103, 242, 1) 100%);
+        }
+
+        img {
+            background: var(--color-white-10, hsla(0, 0%, 100%, .1));
+            border: 1px solid hsla(0, 0%, 93%, .3);
+            border-radius: 7px;
+            height: 25px;
+            padding: 6px;
+            width: 25px;
+        }
+
+        @include max-575 {
+            font-size: 14px;
+            padding: 12px 12px 12px 15px;
+        }
+
+        @include max-425 {
+            font-size: 12px;
+        }
+    }
+}

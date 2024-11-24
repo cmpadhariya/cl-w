@@ -1,0 +1,211 @@
+// Testimonials section scss file.
+
+.testimonials {
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px 0px;
+        text-align: center;
+
+        span.description-secondary {
+            font-weight: 600;
+            padding: 3px 25px;
+            border: 1px solid $border-color;
+            border-radius: 999px;
+        }
+
+        h2 {
+            display: flex;
+            align-items: center;
+
+            span {
+                background: url("../image/heart.webp");
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 52px;
+                height: 52px;
+                display: block;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px 24px;
+        margin: 40px 0px 0px 0px;
+
+        div.testimonials__content_post:nth-child(2) {
+            width: 48.9%;
+
+            p.description-secondary {
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 40px;
+
+                span {
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &_post {
+            border: 1px solid $border-color;
+            padding: 16px 20px;
+            border-radius: 16px;
+            box-shadow: 0px 2px 4px 0px #36394a0f;
+            width: 23.4%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 25px 0px;
+
+            p {
+                span {
+                    font-weight: 600;
+                }
+            }
+
+            .post_meta {
+                display: flex;
+                align-items: center;
+                gap: 0 16px;
+
+                img {
+                    border-radius: 100%;
+                }
+
+                &-content {
+                    h3 {
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 20px;
+                        color: $color-black;
+                    }
+
+                    p {
+                        @extend h3;
+                        font-weight: 400;
+                        color: $description-color;
+                    }
+                }
+            }
+        }
+    }
+
+    @include min-1440 {
+        &__content {
+            div.testimonials__content_post:nth-child(2) {
+                p.description-secondary {
+                    font-size: 26px;
+                    line-height: 42px;
+                }
+            }
+
+            &_post {
+                width: 23.6%;
+
+                .post_meta {
+                    &-content {
+                        h3 {
+                            font-size: 16px;
+                            line-height: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include max-1199 {
+        &__content {
+            div.testimonials__content_post:nth-child(2) {
+                width: 48.8%;
+            }
+
+            &_post {
+                width: 23.1%;
+            }
+        }
+    }
+
+    @include max-991 {
+        &__top {
+            h2 {
+                span {
+                    width: 44px;
+                    height: 44px;
+                }
+            }
+        }
+
+        &__content {
+            div.testimonials__content_post:nth-child(2) {
+                width: 65.2%;
+            }
+
+            &_post {
+                width: 31.1%;
+            }
+        }
+    }
+
+    @include max-767 {
+        &__content {
+            div.testimonials__content_post:nth-child(2) {
+                width: 47.6%;
+
+                p.description-secondary {
+                    font-size: 14px;
+                    line-height: 22px;
+                    font-weight: 400;
+
+                    span {
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            &_post {
+                width: 47.6%;
+            }
+        }
+    }
+
+    @include max-575 {
+        &__top {
+            gap: 10px 0px;
+
+            h2 {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+
+        &__content {
+            div.testimonials__content_post:nth-child(2) {
+                width: 100%;
+            }
+
+            &_post {
+                width: 100%;
+            }
+        }
+    }
+
+    @include max-425 {
+        &__top {
+            h2 {
+                span {
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+        }
+
+        &__content {
+            margin: 30px 0px 0px 0px;
+        }
+    }
+}

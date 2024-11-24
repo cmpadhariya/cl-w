@@ -1,0 +1,166 @@
+// about section css
+.about-us {
+    &__inner {
+        &_heading {
+            h2 {
+                color: $heading-color;
+                padding: 16px 0;
+
+                @include max-991 {
+                    padding: 12px 0 20px 0;
+                }
+            }
+        }
+
+        &_button {
+            display: flex;
+            align-items: center;
+            margin-top: 24px;
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 13px;
+            }
+
+            i {
+                font-size: 22px;
+                color: $color-white;
+
+                @include min-1400 {
+                    font-size: 25px;
+                }
+
+                @include max-575 {
+                    font-size: 20px;
+                }
+
+                &::before {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+
+        &_box {
+            background-color: #333333;
+            border-radius: 20px;
+            padding: 32px 58px;
+
+            @include max-1199 {
+                padding: 32px 22px;
+            }
+
+            @include max-991 {
+                margin-top: 25px;
+                padding: 32px 64px;
+            }
+
+            @include max-767 {
+                padding: 32px 42px;
+            }
+
+            @include max-425 {
+                padding: 25px;
+            }
+
+            &-logo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid rgba(109, 109, 109, 1);
+
+                @include max-575 {
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                p {
+                    font-size: 15px;
+                    line-height: 22px;
+                    padding: 7px 10px 7px 5px;
+                    background-color: $color-white;
+                    border-radius: 24px;
+                    font-weight: 500;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    @include min-1400 {
+                        font-size: 17px;
+                        line-height: 24px;
+                    }
+
+                    span {
+                        color: $color-white;
+                        padding: 4px 10px;
+                        border-radius: 14px;
+                        background-color: rgba(61, 61, 61, 1);
+                    }
+                }
+            }
+
+            &-list {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 27px 0;
+                padding-top: 20px;
+
+                @include max-575 {
+                    justify-content: center;
+                    gap: 27px 50px;
+                }
+
+                &-content {
+                    width: 47%;
+                    padding: 21px 18px;
+                    text-align: center;
+                    border-radius: 10px;
+                    background-color: $color-white;
+
+                    @include max-575 {
+                        width: 55%;
+                    }
+
+                    @include max-425 {
+                        width: 80%;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        line-height: 22px;
+                        font-weight: 500;
+                        margin-top: 6px;
+
+                        @include min-1400 {
+                            font-size: 16px;
+                            line-height: 24px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .row {
+            align-items: center;
+            --bs-gutter-x: 3.5rem;
+            gap: 20px 0;
+
+            @include max-1199 {
+                --bs-gutter-x: 1.5rem;
+            }
+
+            .col {
+                @include max-991 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

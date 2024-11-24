@@ -1,0 +1,69 @@
+// Blog tag list section CSS.
+.blog-tag-list {
+    .blog-list__top {
+        display: flex;
+        flex-direction: column;
+
+        @include max-767 {
+            align-items: center;
+        }
+
+        &_subtitle {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            i {
+                &::before {
+                    font-size: 16px;
+                    color: $sub-heading-blue;
+                    width: fit-content;
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+
+            p {
+                font-weight: 600;
+                color: $sub-heading-blue;
+                text-transform: uppercase;
+            }
+
+            &::before {
+                content: "";
+                width: 50px;
+                height: 1px;
+                background-color: $sub-heading-blue;
+            }
+
+            &::after {
+                content: "";
+                width: 50px;
+                height: 1px;
+                background-color: $sub-heading-blue;
+            }
+        }
+
+        h2 {
+            padding: 16px 0;
+
+            @include max-991 {
+                text-align: center;
+            }
+
+            @include max-767 {
+                padding: 0;
+            }
+
+            span {
+                color: var(--Neutrals-Neutrals700, rgba(90, 85, 85, 1));
+            }
+        }
+
+        p.tag-description {
+            color: rgba(51, 51, 51, 1);
+            text-align: center;
+        }
+    }
+}

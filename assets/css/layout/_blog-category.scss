@@ -1,0 +1,27 @@
+// Blog category page css
+
+// Featured blog section css
+.features-category-blog {
+	.blog-list__top {
+		align-items: center;
+
+		&_subtitle {
+			&::before {
+				content: "";
+				width: 50px;
+				height: 1px;
+				background-color: $sub-heading-blue;
+			}
+		}
+
+		@include max-991 {
+			h2 {
+				text-align: center;
+			}
+		}
+
+		p {
+			text-align: center;
+		}
+	}
+}

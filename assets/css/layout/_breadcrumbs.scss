@@ -1,0 +1,84 @@
+//All Breadcrumbs css file.
+nav.rank-math-breadcrumb {
+	p {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 5px;
+		font-size: 14px;
+		line-height: 22px;
+		font-weight: 600;
+
+		.separator {
+			padding: 0px 10px;
+			
+			&::after {
+				content: '\E85D';
+				font-size: 16px;
+				font-family: fontello;
+			}
+		}
+
+		a {
+			color: $sub-heading-color;
+		}
+
+		a:nth-child(1) {
+			&::before {
+				content: '\E85E';
+				font-family: fontello;
+				margin-right: 6px;
+			}
+		}
+
+		a:nth-child(3) {
+			&::before {
+				content: '\E853';
+				font-family: fontello;
+				margin-right: 6px;
+			}
+		}
+
+		span.last {
+			color: $description-color;
+		}
+	}
+
+	@include min-1400 {
+		p {
+			font-size: 17px;
+			line-height: 25px;
+		}
+	}
+
+	@include max-991 {
+		p {
+			font-size: 13px;
+			line-height: 21px;
+		}
+	}
+
+	@include max-767 {
+		p {
+			font-size: 12px;
+			line-height: 18px;
+		}
+	}
+
+	@include max-575 {
+		p {
+			.separator {
+				&::after {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+	@include max-425 {
+		p {
+			font-size: 13px;
+			line-height: 19px;
+		}
+	}
+}

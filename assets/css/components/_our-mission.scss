@@ -1,0 +1,188 @@
+// Our Mission Section CSS
+.our-mission {
+	&__top {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 18px;
+
+		&_subtitle {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+
+			i {
+				&::before {
+					font-size: 16px;
+					color: $color-white;
+					width: fit-content;
+					display: block;
+					margin: 0;
+					padding: 0;
+				}
+			}
+
+			p {
+				font-weight: 600;
+				color: $color-white;
+				text-transform: uppercase;
+			}
+
+			&::before, &::after {
+				content: "";
+				width: 50px;
+				height: 1px;
+				background-color: $color-white;
+			}
+		}
+
+		h2 {
+			color: $color-white;
+			text-align: center;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 26px;
+		margin-top: 40px;
+
+		span {
+			color: $color-white;
+			text-align: center;
+			display: block;
+		}
+
+		.row {
+			--bs-gutter-x: 20px;
+			--bs-gutter-y: 28px;
+			justify-content: center;
+		}
+
+		&_box {
+			display: flex;
+			align-items: center;
+			gap: 6px;
+
+			h3 {
+				font-weight: 500;
+				background: linear-gradient(to right, #FFFFFF 0%, #A5A5A5 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+
+			p {
+				color: #FAFAFAE5;
+			}
+		}
+	}
+
+	hr {
+		background-color: transparent;
+		padding: 4px 0px;
+		margin: 26px 0;
+		border-top: 1px solid $color-white;
+		border-bottom: 1px solid $color-white;
+	}
+
+	&__bottom {
+		p {
+			font-size: 20px;
+			line-height: 32px;
+			font-weight: 500;
+			color: #FAFAFAE5; 
+			text-align: center;
+		}
+	}
+
+	@include min-1400 {
+		&__bottom {
+			p {
+				font-size: 22px;
+				line-height: 34px;
+			}
+		}
+	}
+
+	@include max-1199 {
+		&__bottom {
+			p {
+				font-size: 18px;
+				line-height: 30px;
+			}
+		}
+	}
+
+	@include max-991 {
+		&__bottom {
+			p {
+				font-size: 16px;
+				line-height: 28px;
+			}
+		}
+	}
+
+	@include max-767 {
+		&__top {
+			&_subtitle {
+				p {
+					text-align: center;
+				}
+			}
+		}
+
+		&__content {
+			gap: 15px;
+			margin-top: 30px;
+
+			.row {
+				--bs-gutter-y: 20px;
+			}
+		}
+	}
+
+	@include max-575 {
+		&__top {
+			&_subtitle {
+				flex-direction: column;
+				gap: 5px;
+				position: relative;
+
+				i {
+					position: absolute;
+					left: -25px;
+				}
+
+				&::before, &::after {
+					width: 100%;
+				}
+			}
+		}
+
+		&__bottom {
+			p {
+				font-size: 15px;
+			}
+		}
+	}
+
+	@include max-425 {
+		&__top {
+			&_subtitle {
+				p {
+					font-size: 12px;
+					line-height: 20px;
+				}
+			}
+		}
+
+		&__bottom {
+			p {
+				font-size: 13px;
+				line-height: 22px;
+			}
+		}
+	}
+}

@@ -1,0 +1,250 @@
+/* cost-of-inaction css */
+.cost-of-inaction {
+	&__subtitle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+
+		@include max-425 {
+			gap: 5px;
+		}
+
+		i {
+			&::before {
+				font-size: 20px;
+				color: $sub-heading-blue;
+				width: fit-content;
+				display: block;
+				margin: 0;
+				padding: 0;
+			}
+		}
+
+		.icon-faq-btn-icon{
+			transform: rotate(-90deg);
+		}
+
+		p {
+			font-weight: 600;
+			color: $sub-heading-blue;
+			text-transform: uppercase;
+		}
+
+		&::before {
+			content: "";
+			width: 50px;
+			height: 1px;
+			background-color: $sub-heading-blue;
+		}
+
+		&::after {
+			content: "";
+			width: 50px;
+			height: 1px;
+			background-color: $sub-heading-blue;
+		}
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 18px 0 16px 0;
+
+		h2 {
+			span {
+				color: #5A5555;
+			}
+
+			br {
+				@include max-767 {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding-bottom: 46px;
+
+		@include max-767 {
+			padding-bottom: 36px;
+		}
+
+		@include max-425 {
+			padding-bottom: 30px;
+		}
+
+		br {
+			@include max-767 {
+				display: none;
+			}
+		}
+	}
+
+	&__box {
+		.row {
+			--bs-gutter-x: 30px;
+
+			@include max-767 {
+				--bs-gutter-y: 20px;
+			}
+		}
+
+		&_image {
+			img {
+				@include max-1199 {
+					width: auto;
+					max-width: 100%;
+					height: auto;
+				}
+			}
+		}
+
+		h3.box-title {
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 28px;
+			color: var(--Neutrals-Neutrals900, rgba(43, 40, 41, 1));
+			display: flex;
+			align-items: center;
+			justify-content: start;
+			text-align: start;
+			gap: 12px;
+
+			@include min-1400 {
+				font-size: 26px;
+				line-height: 30px;
+			}
+
+			@include max-991 {
+				font-size: 21px;
+				line-height: 26px;
+			}
+
+			@include max-575 {
+				font-size: 20px;
+				line-height: 24px;
+			}
+
+			@include max-425 {
+				font-size: 18px;
+				line-height: 22px;
+			}
+
+			i {
+				text-align: center;
+				padding: 6px 0px;
+
+				&::before {
+					display: block;
+					margin: 0;
+					font-size: 24px;
+					color: rgba(192, 55, 68, 1);
+				}
+			}
+		}
+
+		p.box-content {
+			font-size: 20px;
+			line-height: 36px;
+			color: var(--Neutrals-Neutrals900, rgba(43, 40, 41, 1));
+			padding-top: 10px;
+
+			@include min-1400 {
+				font-size: 22px;
+				line-height: 38px;
+			}
+
+			@include max-991 {
+				font-size: 18px;
+				line-height: 34px;
+			}
+
+			@include max-425 {
+				font-size: 16px;
+				line-height: 30px;
+			}
+
+			br {
+				@include max-1199 {
+					display: none;
+				}
+			}
+		}
+
+		&_left {
+			width: auto;
+			padding: 43px 31px 0 29px;
+			margin: auto;
+			border-radius: 20px;
+			background-color: rgba(255, 255, 255, 1);
+			box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.03);
+			border: 1px solid rgba(215, 215, 215, 1);
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			@include max-991 {
+				padding: 40px 29px 0 29px;
+			}
+
+			@include max-767 {
+				padding: 38px 29px 0 29px;
+			}
+
+			@include max-425 {
+				padding: 25px 15px 0 15px;
+			}
+
+			.cost-of-inaction__box_image {
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+				overflow: hidden;
+			}
+		}
+
+		&_second,
+		&_third {
+			padding: 43px 31px 0 29px;
+			border-radius: 20px;
+			background-color: rgba(255, 255, 255, 1);
+			box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.03);
+			border: 1px solid rgba(215, 215, 215, 1);
+
+			@include max-991 {
+				padding: 43px 29px 0 29px;
+			}
+
+			@include max-425 {
+				padding: 25px 15px 0 15px;
+			}
+
+			p {
+				margin-bottom: 20px;
+			}
+		}
+
+		&_third {
+			p {
+				padding-bottom: 50px;
+			}
+		}
+
+		&_second {
+			margin: 0 0 12px 0;
+
+			@include max-767 {
+				margin: 0 0 20px 0;
+			}
+		}
+	}
+}

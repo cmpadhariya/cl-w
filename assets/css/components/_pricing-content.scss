@@ -1,0 +1,141 @@
+// Pricing Content Section CSS
+.pricing-content{
+	&__inner{
+		box-shadow: 0px 3px 10px 0px #00000008;
+		border: 1px solid $border-color;
+		border-radius: 20px;
+		padding: 48px;
+
+		@include max-991{
+			padding: 36px;
+		}
+
+		@include max-575{
+			padding: 30px 20px;
+		}
+
+		.pricing-content__subtitle{
+			width: fit-content;
+			font-size: 14px;
+			line-height: 18px;
+			color: $color-white;
+			background-color: $sub-heading-blue;
+			padding: 6px 16px;
+			margin-bottom: 6px;
+			border-radius: 100px;
+
+			@include min-1400{
+				font-size: 16px;
+				line-height: 20px;
+			}
+		}
+
+		h2{
+			font-size: 24px;
+			line-height: 36px;
+
+			@include min-1400{
+				font-size: 26px;
+				line-height: 38px;
+			}
+
+			@include max-425{
+				font-size: 22px;
+				line-height: 34px;
+			}
+
+			strong{
+				font-weight: 600;
+				color: $description-color;
+			}
+		}
+
+		h3{
+			color: $sub-heading-blue;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 28px;
+			margin: 36px 0 28px 0;
+
+			@include min-1400{
+				font-size: 22px;
+				line-height: 30px;
+			}
+
+			@include max-991{
+				margin: 28px 0 22px 0;
+			}
+
+			@include max-425{
+				font-size: 18px;
+				line-height: 26px;
+				margin: 24px 0 18px 0;
+			}
+
+			strong{
+				font-weight: 600;
+			}
+
+			&::before{
+				margin: 0 15px 0 0;
+				padding: 0;
+				width: fit-content;
+				font-size: 20px;
+				line-height: 20px;
+			}
+		}
+
+		ul{
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+		}
+
+		p, li{
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 24px;
+		
+			@include min-1400 {
+				font-size: 18px;
+				line-height: 26px;
+			}
+		
+			@include max-991 {
+				font-size: 14px;
+				line-height: 22px;
+			}
+
+			strong{
+				font-weight: 700;
+				color: $color-black;
+			}
+		}
+
+		li{
+			color: $description-color;
+		}
+
+		ul + p{
+			margin: 28px 0 10px 0;
+
+			@include max-991{
+				margin-top: 22px;
+			}
+
+			@include max-425{
+				margin-top: 18px;
+			}
+		}
+
+		p + p{
+			margin-bottom: 10px;
+		}
+
+		p{
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+}

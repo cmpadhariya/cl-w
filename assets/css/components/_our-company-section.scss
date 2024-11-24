@@ -1,0 +1,167 @@
+// Our Company Section CSS
+.our-company {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	&__top {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 18px;
+
+		&_subtitle {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+
+			i {
+				&::before {
+					font-size: 16px;
+					color: $sub-heading-blue;
+					width: fit-content;
+					display: block;
+					margin: 0;
+					padding: 0;
+				}
+			}
+
+			p {
+				font-weight: 600;
+				color: $sub-heading-blue;
+				text-transform: uppercase;
+			}
+
+			&::before, &::after {
+				content: "";
+				width: 50px;
+				height: 1px;
+				background-color: $sub-heading-blue;
+			}
+		}
+
+		h2 {
+			text-align: center;
+
+			span {
+				color: $description-color;
+			}
+		}
+	}
+
+	.row {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__content {
+		box-shadow: 0px 3px 10px 0px #00000008;
+		border-radius: 20px;
+		border: 1px solid #ccc;
+		background: linear-gradient(202deg, #B6C3FD, #ffffff 30%);
+		padding: 26px 40px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		p {
+			font-weight: 600;
+			color: $sub-heading-color;
+
+			a {
+				color: $sub-heading-color;
+				text-decoration: underline;
+			}
+		}
+
+		&_bottom {
+			display: flex;
+			align-items: center;
+			gap: 54px;
+
+			hr {
+				height: 48px;
+				width: 3px;
+			}
+
+			span {
+				font-weight: 700;
+				color: $sub-heading-color;
+			}
+		}
+	}
+
+	@include min-1400 {
+		&__top {
+			&_subtitle {
+				i:before {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+
+	@include max-767 {
+		&__inner {
+			gap: 30px;
+		}
+
+		&__content {
+			padding: 26px 26px;
+
+			&_bottom {
+				br {
+					display: none;
+				}
+			}
+		}
+	}
+
+	@include max-575 {
+		&__top {
+			&_subtitle {
+				flex-direction: column;
+				gap: 5px;
+				position: relative;
+
+				i {
+					position: absolute;
+					left: -25px;
+				}
+
+				&::before, &::after {
+					width: 100%;
+				}
+			}
+		}
+
+		&__content {
+			padding: 26px 20px;
+
+			&_bottom {
+				gap: 20px;
+			}
+		}
+	}
+
+	@include max-425 {
+		&__content {
+			&_bottom {
+				flex-direction: column;
+				gap: 10px;
+
+				hr {
+					height: 2px;
+					width: 100%;
+				}
+
+				span {
+					text-align: center;
+				}
+			}
+		}
+	}
+}

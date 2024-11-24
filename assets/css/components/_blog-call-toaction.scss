@@ -1,0 +1,295 @@
+// Blog Call To Action Section V2 CSS
+.blog-call-to-action {
+	@include max-1199 {
+		br {
+			display: none;
+		}
+	}
+
+	.row {
+		--bs-gutter-x: 12px;
+		gap: 30px 0;
+	}
+}
+
+.blog-call-to-action__inner_content {
+	border-radius: 12px;
+	position: relative;
+	padding: 36px 48px;
+	overflow: hidden;
+	height: 100%;
+
+	@include max-1199 {
+		padding: 30px 30px;
+	}
+
+	@include max-575 {
+		padding: 25px 20px;
+	}
+
+	&--background {
+		background: linear-gradient(0deg, rgba(4, 49, 255, .8), rgba(4, 49, 255, .8)), linear-gradient(0deg, rgba(0, 0, 0, .9), rgba(0, 0, 0, .9));
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+
+		img {
+			width: 113%;
+			height: 110%;
+			object-fit: cover;
+			opacity: 0.2;
+
+			@include max-991 {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	@include max-575 {
+		padding: 36px 30px;
+	}
+}
+
+.blog-call-to-action__inner_content--text {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 12px;
+
+	h2 {
+		font-weight: 600;
+		color: $color-white;
+
+		span {
+			font-weight: 600;
+		}
+	}
+
+	&-description {
+		color: $color-white;
+
+		span {
+			font-weight: 500;
+		}
+	}
+
+	a {
+		display: flex;
+		align-items: center;
+		background-color: $color-white;
+		color: $heading-color;
+		font-size: 16px;
+		padding: 12px 20px;
+		margin-top: 10px;
+
+		&::after {
+			content: '\e818';
+			font-family: "fontello";
+			background: var(--color-black-3, #00000008);
+			border: 1px solid hsla(0, 0%, 93%, .3);
+			border-radius: 7px;
+			height: 25px;
+			width: 25px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 16px;
+			line-height: 16px;
+			font-weight: 100;
+			color: $color-black;
+			margin: 0 0 0 10px;
+			padding: 0;
+			transition: all 0.5s;
+
+			@include max-575 {
+				font-size: 18px;
+				line-height: 18px;
+			}
+		}
+
+		&:hover {
+			&::after {
+				color: $color-white;
+			}
+		}
+	}
+
+	&-subtitle {
+		background: var(--color-white-10, #FFFFFF1A);
+		box-shadow: 0px 1px 2px 0px #0000000D;
+		border: 1px solid #F5F5F51A;
+		border-radius: 12px;
+		padding: 7px 15px;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		&::before {
+			content: "";
+			width: 10px;
+			min-width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background: var(--color-spring-green-36, #00B831);
+			box-shadow: 0px 0px 4px 4px #04FF4633;
+		}
+
+		p {
+			font-style: normal;
+			font-size: 13px;
+			line-height: 21px;
+			color: $color-white;
+
+			@include min-1400 {
+				font-size: 15px;
+				line-height: 23px;
+			}
+		}
+	}
+}
+
+.blog-call-to-action__inner_newslatter {
+	padding: 45px 33px;
+	background: #E3E3E399;
+	border: 1px solid #EEEEEE;
+	border-radius: 12px;
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	height: 100%;
+
+	@include max-1199 {
+		padding: 30px 30px;
+
+		br {
+			display: none;
+		}
+	}
+
+	@include max-575 {
+		padding: 25px 20px;
+	}
+
+	&--heading {
+		width: 100%;
+	}
+
+	&--content {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		.wpcf7 .wpcf7-form {
+			.blog-call-to-action__inner_newslatter--content-form {
+				p {
+					display: flex;
+					align-items: center;
+					border: 1px solid $border-color;
+					border-radius: 12px;
+					background: $color-white;
+					box-shadow: 0px 3px 5px 0px #0000000D;
+					padding: 11px 20px;
+					position: relative;
+
+					@include max-575 {
+						padding: 8px 16px;
+					}
+
+					.wpcf7-form-control-wrap,
+					.wpcf7-form-control-wrap .wpcf7-email {
+						width: 100%;
+						margin-right: 20px;
+                        color: $color-black;
+					}
+
+					br {
+						display: none;
+					}
+
+					.wpcf7-email,
+					.wpcf7-email::placeholder {
+						font-size: 15px;
+						line-height: 23px;
+						font-weight: 400;
+						color: $heading-color;
+						font-family: $primary-family;
+						border: none;
+
+						@include min-1400 {
+							font-size: 16px;
+							line-height: 24px;
+						}
+
+						@include max-575 {
+							font-size: 14px;
+							line-height: 22px;
+						}
+					}
+
+					.wpcf7-submit {
+						height: 25px;
+						width: 25px;
+						min-width: 25px;
+						text-indent: 100%;
+						background: url('./../image/Overlay.webp');
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: cover;
+						border: 1px solid #FFFFFF80;
+						border-radius: 8px;
+					}
+
+					.wpcf7-not-valid-tip {
+						position: absolute;
+						bottom: -35px;
+					}
+
+					.wpcf7-spinner {
+						position: absolute;
+						margin: 0;
+						right: -25px;
+					}
+				}
+			}
+
+			.wpcf7-response-output {
+				color: $color-black;
+				font-size: 14px;
+				margin: 25px 0 0 0;
+				padding: 5px 10px;
+				border-radius: 12px;
+			}
+		}
+
+		p.blog-call-to-action__inner_newslatter--content-description {
+			font-family: $secondary-family;
+			font-size: 14px;
+			line-height: 22px;
+			display: flex;
+			align-items: baseline;
+			gap: 16px;
+
+			@include min-1400 {
+				font-size: 16px;
+				line-height: 24px;
+			}
+
+			&::before {
+				content: "\E82A";
+				font-family: "fontello";
+				font-size: 10px;
+				color: $sub-heading-blue;
+				width: fit-content;
+				display: block;
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+}

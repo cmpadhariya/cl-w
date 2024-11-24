@@ -1,0 +1,240 @@
+// Single Blog Page Sidebar Section CSS
+.blog-single__inner_sidebar {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	position: sticky;
+    top: 110px;
+
+	@include max-1199 {
+		br {
+			display: none;
+		}
+	}
+
+	@include max-991{
+		flex-direction: column-reverse;
+	}
+}
+
+.blog-single__inner_sidebar--calltoaction {
+	border-radius: 12px;
+	position: relative;
+	padding: 36px 33px;
+	overflow: hidden;
+	height: 100%;
+
+	@include max-1199 {
+		padding: 25px 30px;
+	}
+
+	@include max-575 {
+		padding: 25px 20px;
+	}
+
+	&-background {
+		background: linear-gradient(0deg, rgba(4, 49, 255, .8), rgba(4, 49, 255, .8)), linear-gradient(0deg, rgba(0, 0, 0, .9), rgba(0, 0, 0, .9));
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+
+		img {
+			width: 113%;
+			height: 110%;
+			object-fit: cover;
+			opacity: 0.2;
+		}
+	}
+
+	@include max-575 {
+		padding: 36px 30px;
+	}
+
+	&-text {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: 18px;
+
+		h3 {
+			font-size: 26px;
+			line-height: 32px;
+			color: $color-white;
+
+			@include min-1400 {
+				font-size: 28px;
+				line-height: 34px;
+			}
+
+			@include max-991 {
+				font-size: 24px;
+				line-height: 30px;
+			}
+
+			@include max-575 {
+				font-size: 22px;
+				line-height: 30px;
+			}
+
+			@include max-425 {
+				font-size: 20px;
+				line-height: 28px;
+			}
+
+			span {
+				font-weight: 800;
+			}
+		}
+
+		&-description, &-bottom-description {
+			color: #FAFAFA;
+
+			span {
+				font-weight: 500;
+			}
+		}
+
+		&-bottom-description{
+			font-family: $secondary-family;
+			font-size: 12px;
+			line-height: 17px;
+			display: flex;
+			align-items: baseline;
+			gap: 16px;
+
+			&::before {
+				content: "\E82A";
+				font-family: "fontello";
+				font-size: 10px;
+				color: #FAFAFA;
+				width: fit-content;
+				display: block;
+				margin: 0;
+				padding: 0;
+			}
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+			border: none;
+			background-color: $color-white;
+			color: $heading-color;
+			font-size: 16px;
+			padding: 12px 20px;
+			margin: 4px 0;
+			cursor: pointer;
+
+			&::after {
+				content: '\e818';
+				font-family: "fontello";
+				font-size: 16px;
+				line-height: 16px;
+				font-weight: 100;
+				color: $color-white;
+				background: $sub-heading-blue;
+				border: 1px solid #FFFFFF80;
+				border-radius: 7px;
+				height: 25px;
+				width: 25px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: 0 0 0 10px;
+				padding: 0;
+				transition: all 0.5s;
+
+				@include max-575 {
+					font-size: 18px;
+					line-height: 18px;
+				}
+			}
+
+			&:hover {
+				&::after {
+					color: $color-white;
+				}
+			}
+		}
+	}
+}
+
+.blog-single__social-icon{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px 30px;
+	border: 1px solid #EEEEEE;
+	border-radius: 12px;
+	padding: 16px 33px;
+
+	@include max-1199{
+		padding: 14px 22px;
+	}
+
+	p{
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 700;
+		color: $color-black;
+
+		@include min-1400{
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+
+	ul{
+		display: flex;
+		align-items: center;
+		gap: 12px 34px;
+		position: relative;
+
+		@include max-1199{
+			gap: 12px 25px;
+		}
+
+		li{
+			a{
+				color: $heading-color;
+				text-decoration: none;
+
+				i{
+					&::before{
+						margin: 0 0 1px 0;
+						padding: 0;
+						width: fit-content;
+						font-size: 20px;
+						line-height: 20px;
+						vertical-align: middle;
+
+						@include min-1400{
+							font-size: 23px;
+							line-height: 23px;
+						}
+					}
+				}
+			}
+
+			p.copy-message{
+				display: none;
+				color: $sub-heading-blue;
+				font-size: 12px;
+				line-height: 12px;
+				position: absolute;
+				bottom: -40px;
+				left: 0;
+
+				@include max-991{
+					top: -30px;
+				}
+			}
+		}
+	}
+}

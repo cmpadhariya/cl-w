@@ -1,0 +1,42 @@
+// latest-cat-articles section file.
+.taxonomy-list{
+    padding-top: 40px;
+    ul{
+        background: rgba(255, 255, 255, 0.5);
+        border-top: 1px solid rgba(238, 238, 238, 1);
+        border-radius: 12px;
+        flex-wrap: wrap;
+    
+        .awm-category-active, 
+         #toggle-categories {  
+        box-shadow: 0px 1px 3px 0px rgba(18, 19, 22, 0.1);
+        border: 1px solid #eee; 
+        border-radius: 8px;
+        background-color: $color-white;
+        color: rgba(18, 19, 22, 1);
+        cursor: pointer;      
+        transition: background-color 0.3s ease; 
+
+        a {
+            padding: 0;
+        }
+    
+        &:hover {
+            background-color: rgba(18, 19, 22, 0.1);
+        }
+    }
+    }
+    .awm-category-hidden {
+        display: none;
+    }
+    .toggle-categories{
+        display: block;
+    }
+}
+.blog-tag-list__top{
+    h2{
+        span{
+            padding-left: 5px;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+// Our Solution section about us page css.
+.our-solution-about {
+	background-color: #1D64FF0D;
+
+	.row {
+		justify-content: center;
+	}
+
+	h2, p {
+		text-align: center;
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 26px;
+
+		&_top {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+
+			h2 {
+				font-size: 49px;
+				line-height: 55px;
+				font-weight: 700;
+				color: $description-color;
+			}
+		}
+
+		&_description {
+			p {
+				line-height: 30px;
+				font-weight: 500;
+
+				strong {
+					font-weight: 600;
+					color: $color-black;
+				}
+			}
+		}
+	}
+
+	@include min-1400 {
+		&__inner {
+			&_top {
+				h2 {
+					font-size: 55px;
+					line-height: 64px;
+				}
+			}
+
+			&_description {
+				p {
+					line-height: 34px;
+				}
+			}
+		}
+	}
+
+	@include max-991 {
+		&__inner {
+			&_top {
+				h2 {
+					font-size: 44px;
+					line-height: 52px;
+				}
+			}
+		}
+	}
+
+	@include max-767 {
+		&__inner {
+			&_top {
+				h2 {
+					font-size: 40px;
+					line-height: 48px;
+				}
+			}
+
+			&_description {
+				p {
+					br {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	@include max-575 {
+		&__inner {
+			&_top {
+				h2 {
+					font-size: 36px;
+					line-height: 44px;
+				}
+			}
+
+			&_description {
+				p {
+					line-height: 26px;
+				}
+			}
+		}
+	}
+
+	@include max-425 {
+		&__inner {
+			&_top {
+				h2 {
+					font-size: 34px;
+					line-height: 42px;
+				}
+			}
+
+			&_description {
+				p {
+					line-height: 24px;
+				}
+			}
+		}
+	}
+}

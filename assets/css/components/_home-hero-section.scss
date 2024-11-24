@@ -1,0 +1,287 @@
+//home hero section start.
+
+.home-hero-section {
+	position: relative;
+	overflow: hidden;
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+
+		@include max-425 {
+			gap: 20px;
+		}
+
+		&_subtitle {
+			display: flex;
+			justify-content: center;
+
+			span {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 10px;
+				padding: 8px 12px;
+				font-weight: 500;
+				line-height: 20px;
+				color: #262626;
+				border: 1px solid #4C4C4C14;
+				box-shadow: 0px 6px 24px 0px #4C4C4C14;
+				border-radius: 100px;
+				background: $color-white;
+				width: fit-content;
+
+				img {
+					@include max-425 {
+						max-width: 100%;
+						height: auto;
+					}
+				}
+
+				@include max-991 {
+					font-size: 16px;
+				}
+
+				@include max-575 {
+					font-size: 13px;
+					gap: 6px;
+				}
+			}
+		}
+
+		&_heading {
+			padding: 28px 0 28px 0;
+			position: relative;
+
+			@include max-767 {
+				padding: 20px 0 18px 0;
+			}
+
+			h1 {
+				text-align: center;
+
+				br {
+					@include max-767 {
+						display: none;
+					}
+				}
+
+				span {
+					color: $sub-heading-blue;
+				}
+			}
+		}
+
+		&_description {
+			p {
+				font-weight: 500;
+				color: $description-color;
+				text-align: center;
+				
+				@include max-425 {
+					font-style: normal;
+					font-display: swap;
+				}
+
+				span {
+					font-style: normal;
+					font-weight: 600;
+				}
+			}
+		}
+
+		&_button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0px 24px;
+			padding: 26px 0 16px 0;
+
+			@include max-425 {
+				flex-direction: column;
+				gap: 10px 0px;
+			}
+
+			a {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				font-size: 16px;
+                padding: 12px 20px;
+				border: 1px solid $border-color;
+
+				@include max-575 {
+					font-size: 14px;
+					padding: 12px 15px;
+				}
+
+				i::before {
+					font-size: 21px;
+					color: $color-white;
+					width: 25px;
+					height: 25px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background: var(--color-white-10, #FFFFFF1A);
+					border: 1px solid hsla(0, 0%, 93%, .3);
+    				border-radius: 7px;
+					margin: 0;
+				}
+
+				&:hover {
+					color: $color-white;
+				}
+			}
+
+            a.first-button {
+                background: $sub-heading-blue;
+                color: $color-white;
+                box-shadow: 0px 3px 10px 0px #1D64FF33;
+
+				&:hover {
+					background: $color-black;
+			
+					i::before {
+						background: var(--color-white-10, #FFFFFF1A);
+					}
+				}
+            }
+
+			a.second-button {
+				background: $color-white;
+				color: $color-black;
+				box-shadow: 0px 3px 5px 0px #0000000D;
+
+				i::before {
+					background: var(--color-black-3, #00000008);
+					color: $color-black;
+				}
+
+				&:hover {
+					background: $color-black;
+					color: $color-white;
+
+					i::before {
+						color: $color-white;
+					}
+				}
+			}
+		}
+
+		&_bottom {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 36px;
+
+			@include max-991 {
+				gap: 3px;
+				width: 65%;
+				margin: 0 auto;
+			}
+
+			@include max-767 {
+				width: 100%;
+				gap: 10px;
+			}
+
+			&--box {
+				display: flex;
+				align-items: center;
+				gap: 8px;
+
+				@include max-991 {
+					align-items: flex-start;
+				}
+			}
+
+			p {
+				font-size: 14px;
+				line-height: 20px;
+				font-weight: 500;
+				color: $sub-heading-color;
+
+				@include min-1400 {
+					font-size: 17px;
+					line-height: 17px;
+				}
+
+				@include max-575 {
+					font-size: 14px;
+				}
+
+				@include max-425 {
+					font-size: 12px;
+					line-height: 18px;
+				}
+			}
+		}
+
+		&_image {
+			position: relative;
+
+			span {
+				font-size: 20px;
+				line-height: 28px;
+				font-weight: 700;
+				color: $color-black;
+				font-family: $secondary-family;
+				display: block;
+				position: absolute;
+				right: 0px;
+				top: -115px;
+
+				@include min-1400 {
+					font-size: 22px;
+					line-height: 30px;
+				}
+
+				@include max-991 {
+					font-size: 14px;
+					line-height: 20px;
+					top: -85px;
+				}
+
+				@include max-767 {
+					display: none;
+				}
+
+				&::after {
+					content: url("../image/home-hero-arrow-icon.webp");
+					position: relative;
+					right: -30px;
+					width: fit-content;
+					display: block;
+				}
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+				border-radius: 20px;
+			}
+
+			img.hero-large-image {
+				height: auto;
+
+				@include max-425 {
+					display: none;
+				}
+			}
+
+			img.hero-small-image {
+				display: none;
+				height: auto;
+				width: auto;
+
+				@include max-425 {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+//home hero section end.

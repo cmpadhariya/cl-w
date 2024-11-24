@@ -1,0 +1,96 @@
+// Common Section Content CSS
+.common-section__content {
+
+	h2,
+	h3 {
+		margin: 20px 0px;
+	}
+
+	h1 {
+		margin-bottom: 20px;
+	}
+
+	h4 {
+		margin: 10px 0px 15px 0;
+		font-size: 20px;
+		line-height: 24px;
+
+		@include max-991 {
+			font-size: 18px;
+			line-height: 22px;
+		}
+
+		@include max-767 {
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+
+	ul {
+		list-style: disc;
+		padding-left: 20px;
+	}
+
+	p {
+		margin: 10px 0;
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+
+	li {
+		padding: 3px 0;
+	}
+
+	p,
+	li,
+	a {
+		font-size: 18px;
+		line-height: 24px;
+
+		@include min-1400 {
+			font-size: 20px;
+			line-height: 24px;
+		}
+
+		@include max-575 {
+			font-size: 14px;
+			line-height: 22px;
+		}
+	}
+
+	a {
+		color: $description-color;
+		text-decoration: underline;
+
+		&:hover {
+			font-family: 600;
+			color: $color-black;
+		}
+	}
+
+	div {
+		margin-bottom: 20px;
+	}
+
+	hr {
+		margin-top: 10px;
+	}
+
+	p,
+	h2,
+	h3,
+	h4,
+	div {
+		&:first-child {
+			margin-top: 0;
+			padding-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+	}
+}

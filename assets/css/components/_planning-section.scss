@@ -1,0 +1,147 @@
+// Planning Section CSS
+.planning-section {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+
+		@include max-1199 {
+			br {
+				display: none;
+			}
+		}
+
+		@include max-575 {
+			gap: 30px;
+		}
+
+		.row {
+			gap: 36px 0;
+			--bs-gutter-x: 2.688rem;
+
+			@include max-1199 {
+				gap: 24px 0;
+				--bs-gutter-x: 1.5rem;
+			}
+
+			@include max-575 {
+				gap: 20px 0;
+			}
+		}
+	}
+}
+
+.planning-section__inner_heading {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	gap: 16px;
+
+	&--subtitle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+
+		i {
+			&::before {
+				font-size: 16px;
+				color: $sub-heading-blue;
+				width: fit-content;
+				display: block;
+				margin: 0;
+				padding: 0;
+			}
+		}
+
+		p {
+			font-weight: 600;
+			color: $sub-heading-blue;
+			text-transform: uppercase;
+		}
+
+		&::before {
+			content: "";
+			width: 50px;
+			height: 1px;
+			background-color: $sub-heading-blue;
+		}
+
+		&::after {
+			content: "";
+			width: 50px;
+			height: 1px;
+			background-color: $sub-heading-blue;
+		}
+	}
+
+	h2 {
+		span {
+			color: #5A5555;
+		}
+	}
+}
+
+.planning-section__inner_box {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 35px 27px;
+	height: 100%;
+	border-radius: 20px;
+	border: 1px solid $border-color;
+	outline: 1px solid transparent;
+
+	@include max-767 {
+		padding: 20px 25px;
+	}
+
+	@include max-425 {
+		padding: 15px 20px;
+	}
+
+	&:hover{
+		border: 1px solid #2b51ff;
+    	box-shadow: 0 2px 3px 0 rgba(29, 100, 255, .2), 0 0 0 3px rgba(29, 100, 255, .2);
+    	outline: 1px solid #2b51ff;
+	}
+
+	h3 {
+		color: $color-black;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		list-style: disc;
+		margin-left: 18px;
+
+		li {
+			color: $description-color;
+		}
+	}
+}
+
+
+.planning-section__inner_btn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+
+	a {
+		display: inline-flex;
+		align-items: center;
+		gap: 12px;
+		text-align: start;
+	}
+
+	p {
+		font-family: $secondary-family;
+		color: $sub-heading-blue;
+		text-align: center;
+	}
+}

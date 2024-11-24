@@ -1,0 +1,88 @@
+@import './core/variable';
+@import './core/global';
+@import './layout/header';
+@import './layout/sidebar';
+@import './components/_home-hero-section';
+@import './components/_our-solution-home';
+@import './components/_improvement-section';
+@import './components/_our-process-section';
+@import './components/_we-work-section';
+@import './components/_call-to-action-section';
+@import './components/_about-us';
+@import './components/_our-pricing-section';
+@import './components/_testimonials';
+@import './components/_contact-section';
+@import './components/_contact';
+@import './components/_faq-section';
+@import './layout/_common-page-section';
+@import './layout/_archive-blog';
+@import './components/_error-page';
+@import './layout/call-to-action-v2';
+@import './layout/footer';
+@import './components/popup';
+@import './components/blog-tag-list-section.scss';
+@import './components/latest-cat-articles';
+@import './layout/_breadcrumbs';
+
+// landing page v2 section
+@import './components/home-hero-v2';
+
+// Thank You page v2 section
+@import './components/_thank_you';
+
+// How It Works Template Section
+@import './components/how-it-work-banner';
+@import './components/our-process-v2';
+@import './components/planning-section';
+@import './components/progress-section';
+
+// why-choose Template Section
+@import './components/why-choose-banner';
+@import './components/why-choose-solution';
+@import './components/content-section';
+@import './components/_identify-section';
+@import './components/key-benefits';
+@import './components/cost-of-inaction';
+@import './components/website-maintenance';
+
+// about-us Template Section
+@import './components/_about-hero-section';
+@import './components/_our-mission';
+@import './components/_problem-section';
+@import './components/_our-solution-about';
+@import './components/_our-success-about';
+@import './components/_our-company-section';
+
+// Blog Archive Page Sections
+@import './components/blog-newslatter';
+@import './components/blog-header';
+@import './components/blog-call-toaction';
+
+// Blog Single Page Section
+@import './components/single-blog-sidebar';
+@import './components/_related-blog-posts';
+@import './components/_author-single-section';
+@import './components/single-blog-content';
+@import './components/single-blog-cta';
+@import './components/_single-blog-pricing-section';
+
+// Blog Category Page Sections
+@import './components/_blog-category-header';
+@import './layout/_blog-category';
+
+// Search Page scss.
+@import './layout/search.scss';
+
+// author Page scss.
+@import './layout/author';
+
+// Contact US Page Section
+@import './components/contact-section-v2';
+@import './components/contact-call-to-action';
+
+// Pricing Page Section
+@import './components/pricing-call-to-action';
+@import './components/pricing-content';
+
+// Woocommerce pages
+@import './components/_wc-single-product';

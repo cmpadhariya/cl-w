@@ -1,0 +1,149 @@
+// identify section css
+
+.identify {
+    &__inner {
+        .row {
+            gap: 40px 0px;
+            --bs-gutter-x: 51px;
+        }
+
+        &_description {
+            display: flex;
+            flex-direction: column;
+            gap: 16px 0px;
+
+            &--subtitle {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    height: 1px;
+                    width: 50px;
+                    background-color: $sub-heading-blue;
+                }
+
+                i {
+                    &::before {
+                        margin: 0;
+                        color: $sub-heading-blue;
+                    }
+                }
+
+                p {
+                    font-weight: 600;
+                    color: $sub-heading-blue;
+                    text-transform: uppercase;
+                }
+
+            }
+
+            h2 {
+                span {
+                    color: $description-color;
+                }
+            }
+        }
+
+        &_list {
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 16px 0px;
+            }
+            li{
+                padding: 18px 23px;
+                border-radius: 20px;
+                box-shadow: 0px 3px 10px 0px #00000008;
+                background: $color-white;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 0 29px;
+
+                p {
+                    font-weight: 600;
+                    color: $color-black;
+                }
+
+                i::before {
+                    font-size: 24px;
+                    color: #C03744;
+                    width: 64px;
+                    height: 64px;
+                    background: #E4626F33;
+                    border-radius: 12px;
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                i.color-bg-blue {
+                    &::before {
+                        background-color: $sub-heading-blue;
+                        color: $color-white;
+                    }
+                }
+                
+                span {
+                    color: $description-color;
+                }
+            }
+        }
+    }
+
+    @include max-1199 {
+        &__inner {
+            &_description {
+                h2,p {
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @include max-991 {
+        &__inner {
+            .row {
+                --bs-gutter-x: 0px;
+            }
+        }
+    }
+
+    @include max-575 {
+        &__inner {
+
+            &_list {
+                li {
+                    padding: 14px 20px;
+
+                    i::before {
+                        height: 50px;
+                        width: 50px;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include max-575 {
+        &__inner {
+            .row {
+                gap: 30px 0;
+            }
+            &_list {
+                ul {
+                    li {
+                        gap: 0 15px;
+                    }
+                }
+            }
+        }
+    }
+}

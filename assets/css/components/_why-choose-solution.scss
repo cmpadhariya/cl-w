@@ -1,0 +1,189 @@
+// Why Choose Solution section CSS
+.why-choose-solution {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+
+		@include max-1199 {
+			br {
+				display: none;
+			}
+		}
+
+		@include max-991 {
+			gap: 30px;
+		}
+
+		.row {
+			gap: 16px 0;
+			--bs-gutter-x: 1rem;
+		}
+	}
+
+	&__inner_heading {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		&--subtitle {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			i {
+				&::before {
+					font-size: 16px;
+					color: $sub-heading-blue;
+					width: fit-content;
+					display: block;
+					margin: 0;
+					padding: 0;
+				}
+			}
+
+			p {
+				font-weight: 600;
+				color: $sub-heading-blue;
+				text-transform: uppercase;
+			}
+
+			&::after {
+				content: "";
+				width: 50px;
+				height: 1px;
+				background-color: $sub-heading-blue;
+			}
+		}
+
+		h2 {
+			span {
+				display: block;
+				color: #5A5555;
+			}
+		}
+	}
+
+	&__inner_box {
+		display: flex;
+		flex-direction: column;
+		gap: 13px;
+		border: 1px solid $border-color;
+		border-radius: 20px;
+		box-shadow: 0px 3px 10px 0px #00000008;
+		background-color: $color-white;
+		padding: 30px;
+		height: 100%;
+
+		@include max-425{
+			padding: 25px;
+		}
+
+		@include max-360{
+			padding: 20px;
+		}
+
+		&--heading {
+			display: flex;
+			align-items: center;
+			gap: 18px;
+
+			i {
+				&::before {
+					font-size: 23px;
+					line-height: 23px;
+					color: $sub-heading-blue;
+					background: #1D64FF1A;
+					margin: 0;
+					padding: 0;
+					min-width: 50px;
+					min-height: 50px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					border-radius: 15px;
+
+					@include max-425 {
+						font-size: 18px;
+						line-height: 18px;
+						min-width: 40px;
+						min-height: 40px;
+					}
+				}
+			}
+
+			h3{
+				font-size: 24px;
+				line-height: 32px;
+				
+				@include min-1400{
+					font-size: 26px;
+					line-height: 34px;
+				}
+
+				@include max-425 {
+					font-size: 20px;
+					line-height: 28px;
+				}
+			}
+		}
+	}
+
+	&__inner_btn {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 16px;
+
+		a {
+			background: linear-gradient(180deg, #5271ff, #2c67f2);
+			display: flex;
+			align-items: center;
+			gap: 0 8px;
+
+			img {
+				height: 25px;
+				width: 25px;
+				background: var(--color-white-10, hsla(0, 0%, 100%, .1));
+				border: 1px solid hsla(0, 0%, 93%, .3);
+				border-radius: 7px;
+				padding: 6px;
+			}
+		}
+
+		p {
+			text-align: center;
+			font-family: $secondary-family;
+            position: relative;
+
+            &::before {
+                content: "\E82A";
+                font-family: "fontello";
+                font-size: 16px;
+                color: $sub-heading-blue;
+                position: absolute;
+                top: 0px;
+                left: -50px;
+                width: fit-content;
+                display: block;
+                margin: 0;
+                padding: 0;
+                
+                @include max-767{
+                    display: none;
+                }
+            }
+
+			span {
+				display: block;
+				font-weight: 700;
+				font-family: $secondary-family;
+
+				@include max-767{
+					display: inline;
+				}
+			}
+		}
+	}
+}

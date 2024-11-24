@@ -1,0 +1,149 @@
+/* author single section css */
+.author-single {
+    &__inner {
+        padding: 32px 32px 32px 24px;
+        display: flex;
+        border: 1px solid rgba(238, 238, 238, 1);
+        border-radius: 12px;
+
+        @include max-575 {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        @include max-767 {
+            padding: 20px 20px 20px 15px;
+        }
+
+        img {
+            border-radius: 12px;
+        }
+
+        p.author-description {
+            padding: 16px 59px 0 0px;
+
+            @include max-991 {
+                padding: 10px 0 0 0;
+            }
+        }
+
+        &_deatils {
+            padding: 0 0 0 32px;
+
+            @include max-575 {
+                padding: 0 0 0 0;
+            }
+
+            span.author-title {
+                color: rgba(128, 128, 128, 1);
+            }
+
+            h3 {
+                a {
+                    color: rgba(13, 13, 13, 1);
+                }
+
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 32px;
+                padding: 8px 0 10px 0;
+                border-bottom: 1px solid rgba(214, 214, 214, 1);
+
+                @include min-1400 {
+                    font-size: 26px;
+                    line-height: 34px;
+                }
+
+                @include max-991 {
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+
+                @include max-575 {
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+
+                @include max-425 {
+                    font-size: 18px;
+                    line-height: 26px;
+                }
+            }
+
+            .author-info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                p.author-post-count {
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 20px;
+                    color: rgba(13, 13, 13, 1);
+                    padding: 4px 12px;
+                    background: rgba(249, 249, 251, 1);
+                    border: 1px solid rgba(238, 238, 238, 1);
+                    border-radius: 6px;
+
+                    @include min-1400 {
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
+
+                    @include max-767 {
+                        font-size: 12px;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__hashtags {
+        padding: 26px 0 0 0;
+        margin-left: 10px;
+
+        @include max-991 {
+            padding: 16px 0 0 0;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px 0;
+
+            @include max-425 {
+                gap: 7px 0;
+            }
+
+            li {
+                padding: 6px 10px;
+                margin-right: 14px;
+                border: 1px solid rgba(214, 214, 214, 1);
+                border-radius: 6px;
+
+				a {
+					font-size: 14px;
+					font-weight: 500;
+					line-height: 20px;
+					color: rgba(13, 13, 13, 1);
+
+					@include min-1400 {
+						font-size: 16px;
+						line-height: 22px;
+					}
+
+					@include max-767 {
+						font-size: 12px;
+						line-height: 18px;
+					}
+
+					@include max-425 {
+						padding: 4px 8px;
+						margin-right: 7px;
+					}
+				}
+            }
+        }
+    }
+}

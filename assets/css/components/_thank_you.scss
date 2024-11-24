@@ -1,0 +1,172 @@
+// thank you section css
+.thank-you {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+
+		@include max-1199 {
+			br {
+				display: none;
+			}
+		}
+	}
+
+	&__inner_heading {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 16px;
+		text-align: center;
+
+		&--subtitle {
+			span {
+				font-weight: 600;
+				width: fit-content;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				padding: 7px 25px 7px 10px;
+				border: 1px solid $border-color;
+				border-radius: 100px;
+			}
+		}
+
+		h1 {
+			span {
+				color: $sub-heading-blue;
+			}
+		}
+	}
+
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		padding: 30px;
+		height: 100%;
+		position: relative;
+		box-shadow: 0px 3px 10px 0px #00000008;
+		background-color: $color-white;
+		border: 1px solid $border-color;
+		border-radius: 20px;
+
+		@include max-1199 {
+			padding: 20px;
+		}
+
+		@include max-991 {
+			padding: 25px;
+		}
+
+		@include max-425 {
+			padding: 20px;
+			gap: 15px;
+		}
+
+		span {
+			position: absolute;
+			top: 10px;
+			right: 13px;
+			font-weight: 700;
+			font-size: 12px;
+			line-height: 17px;
+			color: $color-white;
+			background: $sub-heading-blue;
+			padding: 5px 10px;
+			border-radius: 100px;
+
+			@include min-1400 {
+				font-size: 14px;
+				line-height: 19px;
+			}
+		}
+
+		i {
+			&::before {
+				border-radius: 12px;
+				background: #1D64FF1A;
+				color: $sub-heading-blue;
+				width: 56px;
+				height: 56px;
+				margin: 0;
+				padding: 0;
+				font-size: 36px;
+				line-height: 36px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+
+		p {
+			font-weight: 600;
+			font-size: 22px;
+			line-height: 31px;
+			color: $heading-color;
+			margin: auto 0;
+			text-align: start;
+
+			@include min-1400 {
+				font-size: 24px;
+				line-height: 33px;
+			}
+
+			@include max-425 {
+				font-size: 18px;
+				line-height: 27px;
+			}
+		}
+
+		a.global-button {
+			font-weight: 600;
+			color: $color-white;
+			background: linear-gradient(180deg, #5271ff, #2c67f2);
+			border: 1px solid #dae1e7;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0 10px;
+			padding: 16px 10px;
+
+			@include max-1199 {
+				font-size: 16px;
+				line-height: 20px;
+			}
+
+			@include max-425 {
+				padding: 12px 10px;
+			}
+
+			img {
+				background: var(--color-white-10, hsla(0, 0%, 100%, .1));
+				border: 1px solid hsla(0, 0%, 93%, .3);
+				border-radius: 7px;
+				height: 25px;
+				width: 25px;
+				padding: 6px;
+			}
+		}
+	}
+
+	.row {
+		gap: 1.5rem 0;
+
+		.col-lg-3:nth-child(1) {
+			.thank-you__boxes i::before {
+				color: #0C6452;
+			}
+			.thank-you__boxes a.global-button,
+			.thank-you__boxes span {
+				background: #0C6452;
+			}
+		}
+		.col-lg-3:nth-child(3),
+		.col-lg-3:nth-child(4) {
+			.thank-you__boxes a.global-button {
+				opacity: 0.7;
+			}
+		}
+	}
+}

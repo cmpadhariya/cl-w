@@ -1,0 +1,216 @@
+// Pricing Call To Action Section CSS
+.pricing-call-to-action {
+	&__inner{
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+
+		.row{
+			gap: 25px 0;
+
+			@include max-575 {
+				gap: 20px 0;
+			}
+		}
+	}
+
+	.pricing__garanty {
+		height: 100%;
+		padding: 23px 30px;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		background-color: $color-white;
+		box-shadow: 0px 5px 15px 3px #0000001A;
+		border: 1px solid $border-color;
+		border-radius: 15px;
+
+		&_heading {
+			display: flex;
+			align-items: baseline;
+			gap: 16px;
+
+			i {
+				&::before {
+					margin: 0;
+					padding: 0;
+					width: fit-content;
+					font-size: 35px;
+					line-height: 35px;
+					color: $sub-heading-blue;
+
+					@include max-575 {
+						font-size: 24px;
+						line-height: 24px;
+					}
+				}
+			}
+
+			h3 {
+				font-weight: 600;
+				font-size: 24px;
+				line-height: 34px;
+
+				@include min-1400 {
+					font-size: 26px;
+					line-height: 36px;
+				}
+
+				@include max-575 {
+					font-size: 20px;
+					line-height: 30px;
+				}
+
+				span {
+					color: $sub-heading-blue;
+				}
+			}
+		}
+
+		p {
+			font-weight: 500;
+			padding: 10px 0;
+
+			span {
+				color: $color-black;
+			}
+		}
+	}
+
+	.pricing__calltoaction {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		background: var(--color-grey-7, #111111);
+		box-shadow: 0px 5px 15px 3px #00000033;
+		border-radius: 15px;
+		padding: 30px;
+
+		h3 {
+			font-weight: 600;
+			font-size: 24px;
+			line-height: 34px;
+			color: $color-white;
+
+			@include min-1400 {
+				font-size: 26px;
+				line-height: 36px;
+			}
+
+			@include max-575 {
+				font-size: 20px;
+				line-height: 30px;
+			}
+
+			span {
+				color: #FFFFFFB2;
+			}
+
+			.after-heading {
+				padding: 4px 10px;
+				margin-left: 5px;
+				border: 1px solid $sub-heading-blue;
+				border-radius: 6px;
+				background: linear-gradient(90deg, #0055FF 0%, #0099FF 100%);
+				-webkit-text-fill-color: transparent;
+				-webkit-background-clip: text;
+			}
+		}
+
+		&_btn {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 10px;
+
+			a {
+				font-size: 16px;
+				padding: 12px 20px;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				box-shadow: 0px 3px 5px 0px #0000000D;
+
+				i {
+					width: 25px;
+					height: 25px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background: var(--color-white-10, hsla(0, 0%, 100%, .1));
+					border: 1px solid rgba(238, 238, 238, 0.3);
+					border-radius: 8px;
+
+					&::before {
+						font-size: 13px;
+						line-height: 13px;
+						margin: 0;
+						padding: 0;
+						width: fit-content;
+						display: inline;
+					}
+				}
+
+				&:hover {
+					background-color: $color-black;
+					color: $color-white;
+				}
+			}
+
+			a.first-btn {
+				background-color: $sub-heading-blue;
+
+				i {
+					&::before {
+						margin-top: 2px;
+					}
+				}
+			}
+
+			a.second-btn {
+				color: $heading-color;
+				background-color: $color-white;
+				border: 1px solid $border-color;
+
+				i {
+					background: var(--color-black-3, #00000008);
+				}
+			}
+		}
+	}
+
+	.pricing__bottom-text {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 10px 18px;
+
+		p {
+			display: flex;
+			align-items: center;
+			gap: 15px;
+
+			i {
+				&::before {
+					margin: 0;
+					padding: 0;
+					width: fit-content;
+					font-size: 20px;
+					line-height: 20px;
+				}
+			}
+		}
+
+		hr {
+			height: 22px;
+			width: 2px;
+			color: $border-color;
+
+			@include max-575{
+				display: none;
+			}
+		}
+	}
+}

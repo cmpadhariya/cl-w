@@ -1,0 +1,8 @@
+/node_modules/
+/vendor/
+/build/
+/dist/
+/inc/
+webpack.config.js
+babel.config.js
+.eslintrc.js

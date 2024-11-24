@@ -1,0 +1,314 @@
+// Small Pricing Section CSS
+.single-blog-pricing {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		padding: 18px 0px;
+		background-color: $color-white;
+		border: 1px solid $border-color;
+		border-radius: 15px;
+		box-shadow: 0px 3px 10px 0px #00000008;
+
+		@include max-767 {
+			padding: 18px;
+
+			br {
+				display: none;
+			}
+		}
+
+		@include max-575 {
+			gap: 30px;
+		}
+
+		.pricing-card-row {
+			gap: 30px 0;
+			--bs-gutter-x: 0;
+
+			.col-lg-6 {
+				&:nth-child(2) {
+					.single-blog-pricing__inner_column {
+						border-left: 1px solid $border-color;
+						border-right: 1px solid $border-color;
+
+						@include max-1199 {
+							border-right: unset;
+						}
+
+						@include max-767 {
+							border-left: unset;
+						}
+					}
+				}
+			}
+
+			.col-lg-6 {
+				&:nth-child(3) {
+					.single-blog-pricing__inner_column {
+						@include max-1199 {
+							border-right: 1px solid $border-color;
+						}
+						@include max-991 {
+							border-right: unset;
+						}
+					}
+				}
+			}
+		}
+		.single-blog-pricing__inner_bottom {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+
+			a.single-blog-pricing__inner_btn {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: $color-white;
+				background: $sub-heading-blue;
+				font-size: 16px;
+				padding: 12px 20px;
+				margin: 0px 18px;
+
+				@include max-767 {
+					margin: 0px 0px;
+					font-size: 14px;
+				}
+
+				&::after {
+					content: '\e818';
+					font-family: "fontello";
+					color: $color-white;
+					background: var(--color-white-10, #FFFFFF1A);
+					border: 1px solid hsla(0, 0%, 93%, .3);
+					border-radius: 7px;
+					height: 25px;
+					width: 25px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					font-size: 16px;
+					line-height: 16px;
+					font-weight: 100;
+					margin: 0 0 0 10px;
+					padding: 0;
+					transition: all 0.5s;
+
+					@include max-575 {
+						font-size: 18px;
+						line-height: 18px;
+					}
+				}
+
+				&:hover {
+					&::after {
+						color: $color-white;
+					}
+				}
+			}
+
+			p.single-blog-pricing__inner_bottom-text {
+				font-size: 12px;
+				line-height: 20px;
+				font-weight: 500;
+				color: $sub-heading-blue;
+				text-align: center;
+
+				@include min-1400 {
+					font-size: 14px;
+					line-height: 22px;
+				}
+			}
+		}
+	}
+}
+
+.single-blog-pricing__inner_column {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 26px;
+	padding: 0px 18px;
+	position: relative;
+
+	@include max-767 {
+		height: auto;
+		padding: 0px 0px 30px 0px;
+		border-bottom: 1px solid $border-color;
+	}
+
+	.pricing-card__discount-label {
+		position: absolute;
+		top: -19px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: fit-content;
+		gap: 12px;
+		background-color: $heading-color;
+		padding: 6px 12px;
+		border-radius: 100px;
+
+		@include max-425 {
+			padding: 5px 10px;
+		}
+
+		p {
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 21px;
+			color: #FAFAFA;
+
+			@include min-1400 {
+				font-size: 13px;
+			}
+
+			@include max-425 {
+				font-size: 10px;
+				line-height: 15px;
+			}
+		}
+	}
+
+	p.pricing-card__label {
+		font-size: 12px;
+		line-height: 20px;
+		font-weight: 600;
+		padding: 4px 10px;
+		position: absolute;
+		top: 0px;
+		right: 20px;
+		background: var(--color-white-02, #FFFFFF01);
+		box-shadow: 0px 1px 2px 0px #0000000D;
+		border: 1px solid $border-color;
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		@include min-1400 {
+			font-size: 16px;
+			line-height: 22px;
+		}
+
+		&::before {
+			content: "";
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background: var(--color-spring-green-36, #00B831);
+			box-shadow: 0px 0px 4px 4px #04FF4633;
+		}
+	}
+
+	.pricing-card__heading {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		@include max-767 {
+			gap: 10px;
+		}
+
+		img {
+			width: 50px;
+			height: 50px;
+		}
+
+		&_title {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+
+			span {
+				font-weight: 700;
+				color: $sub-heading-blue;
+				text-transform: uppercase;
+			}
+
+			.label {
+				font-weight: 700;
+				font-size: 10px;
+				line-height: 18px;
+				background-color: $sub-heading-blue;
+				color: $color-white;
+				padding: 4px 10px;
+				border-radius: 12px;
+				text-transform: uppercase;
+
+				@include min-1400 {
+					font-size: 12px;
+					line-height: 20px;
+				}
+			}
+		}
+
+		p {
+			font-size: 15px;
+			line-height: 22px;
+			font-weight: 500;
+
+			@include min-1400 {
+				font-size: 17px;
+				line-height: 24px;
+			}
+
+			@include max-991 {
+				font-size: 13px;
+				line-height: 20px;
+			}
+		}
+	}
+
+	.pricing-card__price {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		&_original {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+		}
+
+		h3 {
+			font-weight: 500;
+			color: $color-black;
+		}
+
+		span {
+			font-size: 14px;
+			line-height: 20px;
+			font-weight: 500;
+			color: $color-black;
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+
+			@include min-1400 {
+				font-size: 16px;
+				line-height: 22px;
+			}
+
+			@include max-1199 {
+				gap: 0px;
+			}
+		}
+
+		.pricing-card__price_number-text .gst {
+			display: none;
+			transform: translateX(24px);
+		}
+
+		.pricing-card__price_del {
+			text-decoration: 2px line-through $sub-heading-blue;
+			border-bottom: 1px solid #1D64FF33;
+			font-weight: 500;
+		}
+	}
+}
